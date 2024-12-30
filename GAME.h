@@ -1,5 +1,9 @@
 #pragma once
 #include <random>
+#include <thread>
+#include <mutex>
+
+
 
 class GAME
 {
@@ -10,6 +14,7 @@ class GAME
 	int passTime = 0;
 
 	double deltaTime = 0.0;
+	//static const int e_passTime = 0;
 
 	int pressX = 0;
 	int pressLeft = 0;
@@ -20,6 +25,9 @@ class GAME
 	std::random_device rd;
 	int random_block[1000];
 	int random_block_number = 0;
+
+	//std::thread threads;
+	//std::mutex mtx;
 
 
 public:
@@ -62,9 +70,9 @@ public:
 	class BLOCK_STAGE* block_stage() { return _block_stage; }
 	class BLOCK* block(int i) { return _block[i]; }
 
-	void updateDeltaTime();
+	//static void updateDeltaTime();
 
-	double getDeltaTime() const
+	double getDeltaTime() //const
 	{
 		return deltaTime;
 	}

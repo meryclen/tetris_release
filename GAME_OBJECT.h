@@ -1,5 +1,5 @@
 #pragma once
-
+//extern int e_passTime = 0;
 class GAME_OBJECT
 {
 	class GAME* Game = 0;

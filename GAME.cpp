@@ -2,6 +2,20 @@
 #include <DxLib.h>
 #include "BLOCK_STAGE.h"
 #include "BLOCK.h"
+//extern int e_passTime = 0;
+#include <vector>
+#include <thread>
+//#include <mutex>
+std::mutex mtx;
+//std::vector<std::thread> threads;
+
+void updateDeltaTime();
+
+double _deltaTime = 0.0;
+int _previousTime = 0;
+
+//void kari();
+
 
 GAME::GAME()
 {
@@ -68,10 +82,13 @@ void GAME::run()
 			_block[0]->init();
 		}
 
-		updateDeltaTime();
+		//std::thread threads;
+		//std::mutex mtx;
 
 		ClearDrawScreen();
 
+		std::thread threads(updateDeltaTime);
+		threads.join();
 
 		_block_stage->draw();
 		_block[0]->update();
@@ -81,15 +98,34 @@ void GAME::run()
 
 		if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
 
+		//threads.join();
 		ScreenFlip();
-		
 	}
 
 }
 
-void GAME::updateDeltaTime()
+void updateDeltaTime()
 {
+	//mtx.lock();
+	//int now = GetNowCount();
+	//deltaTime = (now - previousTime) / 1000.0;
+	//deltaTime = (now - previousTime) / 1000.0;
+	//previousTime = now;
+
 	int now = GetNowCount();
-	deltaTime = (now - previousTime) / 1000.0;
-	previousTime = now;
+	_deltaTime = (now - _previousTime) / 1000.0;
+	_previousTime = now;
+
+	DrawFormatString(700, 250, GetColor(255, 255, 255), "debug: deltaTime: %ld", _deltaTime);
+	DrawFormatString(700, 270, GetColor(255, 255, 255), "debug: deltaTime: %f", _deltaTime);
+	DrawFormatString(700, 300, GetColor(255, 255, 255), "debug: fps?: %d", (int)(1.0/_deltaTime));
+
+	//mtx.unlock();
 }
+
+//void kari()
+//{
+//	getGame()->block_stage()->draw();
+//	_block[0]->update();
+//	_block[0]->draw();
+//}

@@ -3,6 +3,7 @@
 #include "BLOCK_STAGE.h"
 #include <DxLib.h>
 //#include "BLOCK_STAGE.h"
+//#include "GAME_OBJECT.h"
 
 BLOCK::BLOCK(class GAME* game):
 GAME_OBJECT(game){}
@@ -174,7 +175,7 @@ void BLOCK::update()
 
     int now = GetNowCount();
     
-    if(now - getGame()->get_passTime() > 1000)
+    if (now - getGame()->get_passTime() > 1000)//(now - e_passTime() > 1000)
     {
         _block[0].movableDown = true;
         //_block[0].vec.y += 32.0f;
