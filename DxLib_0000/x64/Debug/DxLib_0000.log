@@ -15,5 +15,8 @@ C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(197,132): warning C4244: '�
 C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(197,108): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
   BLOCK_STAGE.cpp
   GAME.cpp
+  GAME_OBJECT.cpp
+  main.cpp
   コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   DxLib_0000.vcxproj -> C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe
