@@ -72,6 +72,9 @@ void GAME::run()
 		if (CheckHitKey(KEY_INPUT_DOWN) == 0)
 			pressDown = 0;
 		
+		if (CheckHitKey(KEY_INPUT_UP) == 0)
+			pressUp = 0;
+
 
 		if (!(block(0)->get_blockStatus(0)))
 		{

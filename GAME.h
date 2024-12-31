@@ -20,6 +20,7 @@ class GAME
 	int pressLeft = 0;
 	int pressRight = 0;
 	int pressDown = 0;
+	int pressUp = 0;
 	//int pressDown1 = 0;
 
 	std::random_device rd;
@@ -94,6 +95,9 @@ public:
 
 	int get_pressDown() { return pressDown; }
 	void set_pressDown(int n) { pressDown = n; }
+
+	int get_pressUp() { return pressUp; }
+	void set_pressUp(int n) { pressUp = n; }
 
 
 	int get_random_block(int i) { return random_block[i]; }

@@ -173,6 +173,51 @@ void BLOCK::update()
     }
 
 
+    if (CheckHitKey(KEY_INPUT_UP))
+        if (getGame()->get_pressUp() == 0)
+        {
+            int k = 1;
+            while (1)
+            {
+                for (int i = 0; i < 4;++i)
+                {
+                    for (int j = 0; j < 4; ++j)
+                    {
+
+                        if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                            if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y + k, j + _block[0].vecMap.x) != 18)
+                            {
+                                //_block[0].blockStatus = 0; //Ï‚İã‚ª‚é
+                                //_block[0].movableDown = false;
+
+                                for (int i = 0; i < 4; ++i) //Ï‚İã‚ª‚é
+                                {
+                                    for (int j = 0; j < 4; ++j)
+                                    {
+                                        if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                                            getGame()->block_stage()->set_stageMap(_block[0].g, _block[0].vecMap.y + i + k - 1, _block[0].vecMap.x + j);
+                                    }
+                                }
+                                _block[0].blockStatus = 0; //Ï‚İã‚ª‚é
+
+                                //break;
+                            }
+
+
+                    }
+                    //if (!_block[0].movableDown) break;
+
+                }
+                ++k;
+                if (!(_block[0].blockStatus)) break;
+            }
+            //if (_block[0].movableDown)
+            //    _block[0].vecMap.y += 1;
+
+            getGame()->set_pressUp(1);
+        }
+
+
     int now = GetNowCount();
     
     if (now - getGame()->get_passTime() > 1000)//(now - e_passTime() > 1000)
