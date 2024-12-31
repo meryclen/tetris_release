@@ -83,6 +83,38 @@ void BLOCK::update()
     }
 
 
+    if (CheckHitKey(KEY_INPUT_Z))
+        if (getGame()->get_pressZ() == 0)
+        {
+
+            for (int i = 0; i < 4;++i)
+            {
+                for (int j = 0; j < 4; ++j)
+                {
+                    if (_block[0].blockMap[_block[0].g][(_block[0].h + 3) % 4][i][j] == _block[0].g)
+                        if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y, j + _block[0].vecMap.x) != 18)
+                        {
+                            _block[0].movableZ = false;
+                            break;
+                        }
+
+                }
+                if (!_block[0].movableZ) break;
+
+            }
+
+            if (_block[0].movableZ)
+            {
+                _block[0].h = (_block[0].h + 3) % 4;
+            }
+            else
+            {
+                _block[0].movableZ = true;
+            }
+
+            getGame()->set_pressZ(1);
+        }
+
 
 
     if (CheckHitKey(KEY_INPUT_LEFT))
@@ -274,8 +306,8 @@ void BLOCK::update()
 
 void BLOCK::draw()
 {
-    DrawFormatString(500, 500, GetColor(255, 255, 255), "debug");
-    DrawRotaGraph(200, 200, 2, 0, _block[0].blockHandle[5], TRUE, FALSE);
+    //DrawFormatString(500, 500, GetColor(255, 255, 255), "debug");
+    //DrawRotaGraph(200, 200, 2, 0, _block[0].blockHandle[5], TRUE, FALSE);
 
     
 

@@ -20,6 +20,7 @@ public:
 		VECTOR vecMap = VGet(0.0f, 0.0f, 0.0f);
 
 		bool movableX = true;
+		bool movableZ = true;
 		bool movableLeft = true;
 		bool movableRight = true;
 		bool movableDown = true;

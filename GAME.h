@@ -17,6 +17,7 @@ class GAME
 	//static const int e_passTime = 0;
 
 	int pressX = 0;
+	int pressZ = 0;
 	int pressLeft = 0;
 	int pressRight = 0;
 	int pressDown = 0;
@@ -29,6 +30,7 @@ class GAME
 
 	//std::thread threads;
 	//std::mutex mtx;
+	bool isFull = true;
 
 
 public:
@@ -86,6 +88,9 @@ public:
 	
 	int get_pressX() { return pressX; }
 	void set_pressX(int n) { pressX = n; }
+
+	int get_pressZ() { return pressZ; }
+	void set_pressZ(int n) { pressZ = n; }
 
 	int get_pressLeft() { return pressLeft; }
 	void set_pressLeft(int n) { pressLeft = n; }

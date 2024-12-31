@@ -1,11 +1,13 @@
 #pragma once
 #include "GAME_OBJECT.h"
 #include <DxLib.h>
+#include <vector>
 
 class BLOCK_STAGE :
     public GAME_OBJECT
 {
 
+public:
     struct DATA
     {
         int blockHandle[20];
@@ -37,8 +39,11 @@ class BLOCK_STAGE :
 
 		VECTOR vecStageMap = VGet(0.0f, 0.0f, 0.0f);
 
+		
+
     };
 
+private:
     DATA _block_stage;
 
 public:

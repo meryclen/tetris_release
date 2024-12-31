@@ -5,11 +5,11 @@
 //extern int e_passTime = 0;
 #include <vector>
 #include <thread>
-//#include <mutex>
-std::mutex mtx;
+#include <mutex>
+//std::mutex mtx;
 //std::vector<std::thread> threads;
 
-void updateDeltaTime();
+//void updateDeltaTime();
 
 double _deltaTime = 0.0;
 int _previousTime = 0;
@@ -57,11 +57,18 @@ void GAME::run()
 	_block[0]->create();
 	_block[0]->init();
 
+	std::vector<std::vector<int>> Vstage(21, std::vector<int>(12));
+	std::vector<int> full_array(4, 0);
 
 	while (ProcessMessage() == 0)
 	{
+		
+
 		if (CheckHitKey(KEY_INPUT_X) == 0)
 			pressX = 0;
+
+		if (CheckHitKey(KEY_INPUT_Z) == 0)
+			pressZ = 0;
 
 		if (CheckHitKey(KEY_INPUT_LEFT) == 0)
 			pressLeft = 0;
@@ -75,23 +82,156 @@ void GAME::run()
 		if (CheckHitKey(KEY_INPUT_UP) == 0)
 			pressUp = 0;
 
-
+		ClearDrawScreen();
 		if (!(block(0)->get_blockStatus(0)))
 		{
 			delete block(0);
 			_block[0] = nullptr;
 			_block[0] = new BLOCK(this);
+
+
+			
+			int k = 0;
+
+
+			for (int i = 0; i <= 19; ++i)
+			{
+				
+				for (int j = 1; j <= 10; ++j)
+				{
+					if (isFull && (block_stage()->get_stageMap(i, j) != 18))
+					{
+						DrawFormatString(700, 500, GetColor(255, 255, 255), "hitotuOK");
+						isFull = true;
+					}
+					else
+					{
+						isFull = false;
+						DrawFormatString(700, 600, GetColor(255, 255, 255), "kokomadeOK");
+						break;
+					}
+
+				}
+				if (isFull)
+				{
+					full_array[k] = i;
+					++k;
+				}
+				else isFull = true;
+			}
+
+
+			DrawFormatString(700, 400, GetColor(255, 255, 255), "%d", full_array[0]);
+			DrawFormatString(700, 420, GetColor(255, 255, 255), "%d", full_array[1]);
+			DrawFormatString(700, 440, GetColor(255, 255, 255), "%d", full_array[2]);
+			DrawFormatString(700, 460, GetColor(255, 255, 255), "%d", full_array[3]);
+			//DrawFormatString(700, 480, GetColor(255, 255, 255), "%d", full_array[4]);
+			
+			DrawFormatString(700, 680, GetColor(255, 255, 255), "%d", k);
+			DrawFormatString(700, 700, GetColor(255, 255, 255), "%d", full_array.size());
+
+			for (int i = 0; i < 21; ++i)
+			{
+				for (int j = 0; j < 12; ++j)
+				{
+					Vstage[i][j] = block_stage()->get_stageMap(i, j);
+				}
+			}
+
+
+			//while (1)
+			//{
+			//	ScreenFlip();
+			//	if (CheckHitKey(KEY_INPUT_SPACE)) break;
+			//}
+
+
+			for (int n = 0; n < k; ++n)
+			{
+				if (full_array[n] - n > 15)
+					Vstage.erase(Vstage.begin() + 15);
+				else
+				Vstage.erase(Vstage.begin() + full_array[n] -n);
+				
+			}
+
+			for (int n = 0; n < k; ++n)
+			{
+				Vstage.insert(Vstage.begin(), { 10,18,18,18,18,18,18,18,18,18,18,10 });
+			}
+
+
+			for (int i = 0; i < 4; ++i)
+				full_array[i] = 0;
+
+
+			for (int i = 0; i < 21; ++i)
+			{
+				for (int j = 0; j < 12; ++j)
+				{
+					block_stage()->set_stageMap(Vstage[i][j], i, j);
+				}
+			}
+
+
+			//while (!CheckHitKey(KEY_INPUT_SPACE))
+			//{
+				//DrawFormatString(500, 700, GetColor(255, 255, 255), "%s","kokomadeOK");
+				//ScreenFlip();
+			//}
+
+			//DrawFormatString(500, 700, GetColor(255, 255, 255), "%s","komadeOFF");
+			//std::string str = "koko";
+
+				//if (isFull)
+				//{
+			/*for (int n = 0; n < full_array.size(); ++n)
+			{
+				for (int m = 1; m <= 10; ++m)
+					block_stage()->set_stageMap(18, full_array[n], m);
+			}*/
+			
+			/*
+					//for (int k = 19; k >= 0; --k)
+					//{
+						//for (int l = 1; l <= 10; ++l)
+						//{
+							//for (int b = 19; b >= 0; --b)
+							//{
+								//for (int l = 1; l <= 10; ++l)
+								//{
+									for (int a = full_array.size() - 1; a >= 0; --a)
+									{
+										for (int b = 19; b >= 0; --b)
+										{
+											for (int l = 1 ; l <= 10; ++l)
+											{
+												if (b == full_array[a]) ++zure;
+												else
+													block_stage()->set_stageMap(block_stage()->get_stageMap(b, l), b + zure, l); //block_stage()->get_stageMap(k, l)
+											}
+										}
+									}
+								//}
+							//}
+
+						//}
+					//}					
+				//}				
+				*/
+
 			_block[0]->create();
 			_block[0]->init();
 		}
 
+		DrawFormatString(500, 400, GetColor(255, 255, 255), "kokomadeOKkkkkk");
 		//std::thread threads;
 		//std::mutex mtx;
 
-		ClearDrawScreen();
+		
 
-		std::thread threads(updateDeltaTime);
-		threads.join();
+		//std::thread threads(updateDeltaTime);
+		//threads.join();
 
 		_block_stage->draw();
 		_block[0]->update();
@@ -107,24 +247,26 @@ void GAME::run()
 
 }
 
-void updateDeltaTime()
-{
-	//mtx.lock();
-	//int now = GetNowCount();
-	//deltaTime = (now - previousTime) / 1000.0;
-	//deltaTime = (now - previousTime) / 1000.0;
-	//previousTime = now;
-
-	int now = GetNowCount();
-	_deltaTime = (now - _previousTime) / 1000.0;
-	_previousTime = now;
-
-	DrawFormatString(700, 250, GetColor(255, 255, 255), "debug: deltaTime: %ld", _deltaTime);
-	DrawFormatString(700, 270, GetColor(255, 255, 255), "debug: deltaTime: %f", _deltaTime);
-	DrawFormatString(700, 300, GetColor(255, 255, 255), "debug: fps?: %d", (int)(1.0/_deltaTime));
-
-	//mtx.unlock();
-}
+//void updateDeltaTime()
+//{
+//	//mtx.lock();
+//	//int now = GetNowCount();
+//	//deltaTime = (now - previousTime) / 1000.0;
+//	//deltaTime = (now - previousTime) / 1000.0;
+//	//previousTime = now;
+//
+//	int now = GetNowCount();
+//	_deltaTime = (now - _previousTime) / 1000.0;
+//	_previousTime = now;
+//
+//	DrawFormatString(700, 250, GetColor(255, 255, 255), "debug: deltaTime: %ld", _deltaTime);
+//	DrawFormatString(700, 270, GetColor(255, 255, 255), "debug: deltaTime: %f", _deltaTime);
+//	DrawFormatString(700, 300, GetColor(255, 255, 255), "debug: fps?: %d", (int)(1.0/_deltaTime));
+//
+//	DrawFormatString(700, 330, GetColor(255, 255, 255), "-1 % 4 : %d", -1 % 4);
+//	DrawFormatString(700, 350, GetColor(255, 255, 255), "-2 % 4 : %d", -2 % 4);
+//	//mtx.unlock();
+//}
 
 //void kari()
 //{
