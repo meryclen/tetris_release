@@ -7,6 +7,7 @@
 
 class GAME
 {
+	int gameStatus = 0; //0:正常　1:ゲームオーバー
 //public:
 	int startTime = 0;
 	int previousTime = 0;

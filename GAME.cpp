@@ -89,8 +89,15 @@ void GAME::run()
 
 		if (!(block(0)->get_blockStatus(0)))
 		{
+
+
+
+
 			delete block(0);
 			_block[0] = nullptr;
+
+
+
 			_block[0] = new BLOCK(this);
 
 			
@@ -265,7 +272,36 @@ void GAME::run()
 
 
 			_block[0]->create();
-			_block[0]->init();
+			_block[0]->init();			
+
+			
+
+			for (int i = 0; i < 4;++i)
+			{
+				for (int j = 0; j < 4; ++j)
+				{
+					if (block(0)->get_block_gh(i, j) == block(0)->get_block_g())
+						if (block_stage()->get_stageMap(i + block(0)->get_vecMap_y(), j + block(0)->get_vecMap_x()) != 18)
+						{
+							gameStatus = 1;
+							//_block[0]->update();
+							//_block[0]->draw();
+							//ScreenFlip();
+						}
+
+						//DrawRotaGraph(48 + 32 * j + 32 * (int)_block[0].vecMap.x, 48 + 32 * i + 32 * (int)_block[0].vecMap.y, 1, 0, _block[0].blockHandle[_block[0].blockMap[_block[0].g][_block[0].h][i][j]], TRUE, FALSE);
+				}
+			}
+
+
+			/*if (gameStatus == 1)
+			{
+				DrawFormatString(400, 300, GetColor(255, 255, 255), "Game Over");
+
+			}*/
+
+
+
 
 					/*
 					if (isFull)
@@ -463,8 +499,21 @@ void GAME::run()
 		//threads.join();
 
 		_block_stage->draw();
+		DrawFormatString(400, 200, GetColor(255, 255, 255), "Game Over Flag: %d",gameStatus);
+		if (gameStatus == 1)
+		{
+			_block[0]->draw();
+			gameStatus = 0;
+			DrawFormatString(400, 300, GetColor(255, 255, 255), "Game Over");
+			ScreenFlip();
+			break;
+			//if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
+		}
+
+
 		_block[0]->update();
 		_block[0]->draw();
+
 
 		DrawFormatString(500, 650, GetColor(200, 0, 0), "Press Escape Button\n");
 

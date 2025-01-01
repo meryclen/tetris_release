@@ -237,4 +237,12 @@ public:
 
 	int get_blockStatus(int i) { return _block[i].blockStatus; }
 
+
+	int get_block_g() { return _block[0].g; }
+	int get_block_gh(int i, int j) { return _block[0].blockMap[_block[0].g][_block[0].h][i][j]; }
+
+	int get_vecMap_x() { return _block[0].vecMap.x; }
+
+	int get_vecMap_y() { return _block[0].vecMap.y; }
+
 };

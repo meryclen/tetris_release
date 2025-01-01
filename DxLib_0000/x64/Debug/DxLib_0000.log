@@ -1,2 +1,4 @@
 ﻿  GAME.cpp
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(244,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(246,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
   DxLib_0000.vcxproj -> C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe

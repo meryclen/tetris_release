@@ -44,7 +44,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR IpCmdLine,
 
 	while (!(CheckHitKey((KEY_INPUT_RETURN))))
 	{
-		ClearDrawScreen();
+		//ClearDrawScreen();
 		DrawFormatString(500, 700, GetColor(200, 0, 0), "エンターキーを押すと終了します\n");
 		ScreenFlip();
 	}
