@@ -7,7 +7,7 @@
 class BLOCK :
     public GAME_OBJECT
 {
-
+	int soundHandle[10];
 	//int pressDown = 0;
 
 public:
@@ -15,6 +15,7 @@ public:
 	{		
 
 		int blockHandle[20];
+		
 
 		VECTOR vec = VGet(0.0f, 0.0f, 0.0f);
 		VECTOR vecMap = VGet(0.0f, 0.0f, 0.0f);
@@ -244,5 +245,8 @@ public:
 	int get_vecMap_x() { return _block[0].vecMap.x; }
 
 	int get_vecMap_y() { return _block[0].vecMap.y; }
+
+	//int get_soundHandle(int i) { return soundHandle[i]; };
+	
 
 };

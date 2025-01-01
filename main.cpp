@@ -14,7 +14,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR IpCmdLine,
 	//êÇíºìØä˙
 	//SetWaitVSyncFlag(FALSE);
 
-	
+	SetCreateSoundDataType(DX_SOUNDDATATYPE_MEMNOPRESS);
+
 	SetAlwaysRunFlag(TRUE);
 
 	if (DxLib_Init() == -1)

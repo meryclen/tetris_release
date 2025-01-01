@@ -6,7 +6,12 @@
 //#include "GAME_OBJECT.h"
 
 BLOCK::BLOCK(class GAME* game):
-GAME_OBJECT(game){}
+GAME_OBJECT(game)
+{
+    soundHandle[GAME::KOKA] = LoadSoundMem("sound/koka.mp3");
+    soundHandle[GAME::KAKO] = LoadSoundMem("sound/kako.mp3");
+    soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
+}
 
 BLOCK::~BLOCK() {}
 
@@ -79,7 +84,14 @@ void BLOCK::update()
                 _block[0].movableX = true;
             }
 
+                if (getGame()->get_pressX() == 0)
+                {
+                    PlaySoundMem(soundHandle[GAME::KOKA], DX_PLAYTYPE_BACK);
+                    //getGame()->set_soundON(0,1);
+                }
+
                 getGame()->set_pressX(1);
+
     }
 
 
@@ -110,6 +122,12 @@ void BLOCK::update()
             else
             {
                 _block[0].movableZ = true;
+            }
+
+            if (getGame()->get_pressX() == 0)
+            {
+                PlaySoundMem(soundHandle[GAME::KAKO], DX_PLAYTYPE_BACK);
+                //getGame()->set_soundON(0,1);
             }
 
             getGame()->set_pressZ(1);
@@ -190,7 +208,7 @@ void BLOCK::update()
                             }
                         }
                         _block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-
+                        PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
                         break;
                     }
 
@@ -231,7 +249,7 @@ void BLOCK::update()
                                     }
                                 }
                                 _block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-
+                                PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
                                 //break;
                             }
 
@@ -276,7 +294,7 @@ void BLOCK::update()
                             }
                         }
                         _block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-
+                        PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
                         break;
                     }
 

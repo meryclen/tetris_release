@@ -7,6 +7,42 @@
 
 class GAME
 {
+
+public:
+
+	enum BLOCK_TYPE
+	{
+		//BLOCK_TYPE_NULL,
+		BLOCK_TYPE_I,
+		BLOCK_TYPE_O,
+		BLOCK_TYPE_S,
+		BLOCK_TYPE_Z,
+		BLOCK_TYPE_J,
+		BLOCK_TYPE_L,
+		BLOCK_TYPE_T,
+		BLOCK_TYPE_NUM
+
+	};
+
+	enum BLOCK_ANGLE
+	{
+		BLOCK_ANGLE_0,
+		BLOCK_ANGLE_90,
+		BLOCK_ANGLE_180,
+		BLOCK_ANGLE_270,
+		BLOCK_ANGLE_NUM
+	};
+
+	enum SOUND_TYPE
+	{
+		KOKA,
+		KAKO,
+		DON,
+		SOUND_NUM
+	};
+
+
+private:
 	int gameStatus = 0; //0:正常　1:ゲームオーバー
 //public:
 	int startTime = 0;
@@ -34,30 +70,9 @@ class GAME
 	bool isFull = true;
 
 
-public:
+	//
+	int soundON[GAME::SOUND_NUM] = { 0 };
 
-	enum BLOCK_TYPE
-	{
-		//BLOCK_TYPE_NULL,
-		BLOCK_TYPE_I,
-		BLOCK_TYPE_O,
-		BLOCK_TYPE_S,
-		BLOCK_TYPE_Z,
-		BLOCK_TYPE_J,
-		BLOCK_TYPE_L,
-		BLOCK_TYPE_T,
-		BLOCK_TYPE_NUM
-
-	};
-
-	enum BLOCK_ANGLE
-	{
-		BLOCK_ANGLE_0,
-		BLOCK_ANGLE_90,
-		BLOCK_ANGLE_180,
-		BLOCK_ANGLE_270,
-		BLOCK_ANGLE_NUM
-	};
 
 
 private:
@@ -111,4 +126,9 @@ public:
 
 	int get_random_block_number() { return random_block_number; }
 	void set_random_block_number(int n) { random_block_number = n; }
+
+
+	//
+	int get_soundON(int i) { return soundON[i]; }
+	void set_soundON(int i,int j) { soundON[i] = j; }
 };

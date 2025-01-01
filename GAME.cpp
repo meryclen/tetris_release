@@ -90,7 +90,7 @@ void GAME::run()
 		if (!(block(0)->get_blockStatus(0)))
 		{
 
-
+			//PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
 
 
 			delete block(0);
