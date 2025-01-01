@@ -1,4 +1,31 @@
-﻿  GAME.cpp
+﻿  BLOCK.cpp
 C:\Users\Administrator\source\repos\tetris\BLOCK.h(244,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\Administrator\source\repos\tetris\BLOCK.h(246,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(60,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(60,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(95,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(95,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(128,115): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(128,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(154,115): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(154,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(180,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(180,87): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(189,132): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(189,108): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(220,102): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(220,95): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(230,148): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(230,124): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(266,92): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(266,86): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(275,132): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(275,108): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  BLOCK_STAGE.cpp
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(244,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(246,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+  GAME.cpp
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(244,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(246,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+  コードを生成中...
   DxLib_0000.vcxproj -> C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe

@@ -167,7 +167,7 @@ void GAME::run()
 						DrawFormatString(800, 490, GetColor(255, 255, 255), "full_array[1]: %d", full_array[1]);
 						DrawFormatString(800, 510, GetColor(255, 255, 255), "full_array[2]: %d", full_array[2]);
 						DrawFormatString(800, 530, GetColor(255, 255, 255), "full_array[3]: %d", full_array[3]);
-						ScreenFlip();
+						//ScreenFlip();
 					//while (1)
 						DrawFormatString(800, 550, GetColor(255, 255, 255), "bbb: " );
 					--b;

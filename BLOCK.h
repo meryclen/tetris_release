@@ -103,7 +103,7 @@ public:
 			{
 				{9,9,9,9},
 				{9,2,2,9},
-				{2,GAME::BLOCK_TYPE_S,2,9},
+				{2,GAME::BLOCK_TYPE_S,9,9},
 				{9,9,9,9}
 		},
 			{
