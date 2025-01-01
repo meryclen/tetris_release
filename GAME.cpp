@@ -102,7 +102,7 @@ void GAME::run()
 
 			
 
-
+			isFull = true;
 
 			//for (int i = 19; i >= 0; --i)
 			//{
@@ -151,6 +151,7 @@ void GAME::run()
 						isFull = true;
 						//for (int k = 1; k <= 10; ++k)
 							//block_stage()->set_stageMap1(block_stage()->get_stageMap(i - b, k), i, k);
+						break;
 					}
 				}
 
@@ -159,7 +160,16 @@ void GAME::run()
 				{
 					for (int k = 1; k <= 10; ++k)
 						block_stage()->set_stageMap1(block_stage()->get_stageMap(i, k), b, k);
-
+						DrawFormatString(800, 450, GetColor(255, 255, 255), "b: %d",b);
+						DrawFormatString(800, 470, GetColor(255, 255, 255), "i: %d", i);
+						if(isFull) DrawFormatString(800, 490, GetColor(255, 255, 255), "isFull : true");
+						DrawFormatString(800, 470, GetColor(255, 255, 255), "full_array[0]: %d", full_array[0]);
+						DrawFormatString(800, 490, GetColor(255, 255, 255), "full_array[1]: %d", full_array[1]);
+						DrawFormatString(800, 510, GetColor(255, 255, 255), "full_array[2]: %d", full_array[2]);
+						DrawFormatString(800, 530, GetColor(255, 255, 255), "full_array[3]: %d", full_array[3]);
+						ScreenFlip();
+					//while (1)
+						DrawFormatString(800, 550, GetColor(255, 255, 255), "bbb: " );
 					--b;
 				}
 				isFull = false;
