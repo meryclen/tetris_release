@@ -27,6 +27,15 @@ void BLOCK_STAGE::draw()
         for (int j = 0; j < 12; ++j)
         {
             //if(_block_stage.map[i][j] == 10)
+            //DrawFormatString(700, 300, GetColor(255, 255, 255), "i: %d",i);
+            //DrawFormatString(700, 350, GetColor(255, 255, 255), "j: %d", j);
+            /*ScreenFlip();
+            while (1)
+                if (CheckHitKey(KEY_INPUT_SPACE)) break;
+
+            while (1)
+                if (CheckHitKey(KEY_INPUT_RETURN)) break;*/
+            //ScreenFlip();
             DrawRotaGraph(48+32 * j, 48+32 * i, 1, 0, _block_stage.blockHandle[_block_stage.stageMap[i][j]], TRUE, FALSE);
         }
     }

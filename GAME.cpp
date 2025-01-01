@@ -57,8 +57,11 @@ void GAME::run()
 	_block[0]->create();
 	_block[0]->init();
 
-	std::vector<std::vector<int>> Vstage(21, std::vector<int>(12));
-	std::vector<int> full_array(4, 0);
+	//std::vector<std::vector<int>> Vstage(21, std::vector<int>(12));
+	//std::vector<int> full_array(4, 0);
+
+	int full_array[4] = { -1,-1,-1,-1 };
+
 
 	while (ProcessMessage() == 0)
 	{
@@ -83,14 +86,241 @@ void GAME::run()
 			pressUp = 0;
 
 		ClearDrawScreen();
+
 		if (!(block(0)->get_blockStatus(0)))
 		{
 			delete block(0);
 			_block[0] = nullptr;
 			_block[0] = new BLOCK(this);
 
+			
+
+
+
+			//for (int i = 19; i >= 0; --i)
+			//{
+			int a = 0;
+			for (int l = 19; l >= 0; --l)
+			{
+				for (int k = 1; k <= 10; ++k)
+				{
+					if (isFull && (block_stage()->get_stageMap(l, k) != 18))
+					{
+						DrawFormatString(700, 500, GetColor(255, 255, 255), "isFull true");
+						isFull = true;
+						
+					}
+					else
+					{
+						isFull = false;
+						DrawFormatString(700, 600, GetColor(255, 255, 255), "isFull false");
+						break;
+					}
+				}
+				if (isFull)
+				{
+					full_array[a] = l;
+					++a;
+				}
+				isFull = true;
+			}
+
+					//isFull = true;
+
+				//for (int j = 1; j <= 10; ++j)
+				//{
+
+			isFull = false;
+
+
+			int b = 19;
+			
+			for (int i = 19; i >= 0; --i)
+			{
+				for (int l = 0; l < 4; ++l)
+				{
+					if (i == full_array[l])
+					{
+						isFull = true;
+						//for (int k = 1; k <= 10; ++k)
+							//block_stage()->set_stageMap1(block_stage()->get_stageMap(i - b, k), i, k);
+					}
+				}
+
+
+				if (!isFull)
+				{
+					for (int k = 1; k <= 10; ++k)
+						block_stage()->set_stageMap1(block_stage()->get_stageMap(i, k), b, k);
+
+					--b;
+				}
+				isFull = false;
+			}
+
+
+
+			/*
+				for (int j = 0; j < 4; ++j)
+				{
+					if (i == full_array[j])
+					{
+						isFull = true;
+
+						for (int k = 1; k <= 10; ++k)
+							block_stage()->set_stageMap1(block_stage()->get_stageMap(i - b, k), i, k);
+					}
+					b = j + 1;
+					break;
+				}
+
+
+				if (!isFull)
+				{
+					for (int k = 1; k <= 10; ++k)
+						block_stage()->set_stageMap1(block_stage()->get_stageMap(i - b, k), i, k);
+				}
+
+				isFull = false;
+			}
+
+
+			for (int i = 19; i >= 0; --i)
+			{
+				for (int j = 0; j < 4; ++j)
+				{
+					if (i == full_array[j])
+					{
+						isFull = true;
+
+						for (int k = 1; k <= 10; ++k)
+							block_stage()->set_stageMap1(block_stage()->get_stageMap(i - b, k), i, k);
+					}
+					b = j + 1;
+					break;
+				}
+
+
+				if (!isFull)
+				{
+					for (int k = 1; k <= 10; ++k)
+						block_stage()->set_stageMap1(block_stage()->get_stageMap(i - b, k), i, k);
+				}
+
+				isFull = false;
+			}
+
+
+
+			for (int i = 0; i < 20; ++i)
+				for (int j=1; j<=10; ++j)
+					block_stage()->set_stageMap(block_stage()->get_stageMap1(i,j), i, j);
+
 
 			
+
+
+			//int a = 0;
+			//int b = 0;
+			/*for (int i = 19; i >= 0; --i)
+			{
+				for (int j = 0; j < 4; ++j)
+				{
+					if (i == full_array[j])
+					{
+						isFull = true;
+						//++a;
+						if (i - j - 1 < 0)
+						{
+							while(1) if(CheckHitKey(KEY_INPUT_RETURN)) break;
+							//for (int k=1; k<=10; ++k)
+							//block_stage()->set_stageMap(18, i, k);
+						}
+						else
+						{
+							for (int k = 1; k <= 10; ++k)
+							block_stage()->set_stageMap(block_stage()->get_stageMap(i - j - 1-a, k), i, k);
+						}
+					b = j+1;
+							break;
+					}
+				}
+
+				if (!isFull)
+				{
+					for (int k = 1; k <= 10; ++k)
+						block_stage()->set_stageMap(block_stage()->get_stageMap(i - b , k), i, k);
+				}
+
+				isFull = false;
+			}*/
+
+
+			for (int i = 0; i < 20; ++i)
+				for (int j = 1; j <= 10; ++j)
+					block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
+
+			for (int i=0; i<4; ++i)
+			full_array[i] = -1;
+
+
+			_block[0]->create();
+			_block[0]->init();
+
+					/*
+					if (isFull)
+					{
+						if (i - a < 0)
+						{
+							for (int j = 1; j <= 10; ++j)
+							block_stage()->set_stageMap(18, i, j);
+						}
+						else
+						{
+							//++a;
+							for (int j = 1; j <= 10; ++j)
+							block_stage()->set_stageMap(block_stage()->get_stageMap(i - a, j), i, j);
+						}
+					}
+					*/
+
+					/*
+					else
+					{
+						if (i - a < 0)
+						{
+							for (int j = 1; j <= 10; ++j)
+							block_stage()->set_stageMap(18, i, j);
+						}
+						else
+						{
+							for (int j = 1; j <= 10; ++j)
+							block_stage()->set_stageMap(block_stage()->get_stageMap(i - a, j), i, j);
+						}
+
+					}
+					*/
+
+				//}
+			//}
+
+			
+
+			/*
+					
+					for (int k = 19; k >= 0; --k)
+						for (int l = 1; l <= 10; ++l)
+						{
+							++a;
+							block_stage()->set_stageMap(block_stage()->get_stageMap(i - a, l), k, l);
+
+						}
+				}
+				else isFull = true;
+			}*/
+
+
+		/*
 			int k = 0;
 
 
@@ -220,8 +450,7 @@ void GAME::run()
 				//}				
 				*/
 
-			_block[0]->create();
-			_block[0]->init();
+			
 		}
 
 		DrawFormatString(500, 400, GetColor(255, 255, 255), "kokomadeOKkkkkk");
