@@ -4,16 +4,21 @@
 #include <DxLib.h>
 //#include "BLOCK_STAGE.h"
 //#include "GAME_OBJECT.h"
+#include <string>
 
 BLOCK::BLOCK(class GAME* game):
 GAME_OBJECT(game)
 {
     soundHandle[GAME::KOKA] = LoadSoundMem("sound/koka.mp3");
     soundHandle[GAME::KAKO] = LoadSoundMem("sound/kako.mp3");
+    soundHandle[GAME::KA] = LoadSoundMem("sound/ka.mp3");
     soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
 }
 
-BLOCK::~BLOCK() {}
+BLOCK::~BLOCK()
+{
+    DeleteFontToHandle(fontHandle);
+}
 
 void BLOCK::create()
 {
@@ -50,6 +55,17 @@ void BLOCK::init()
 
 void BLOCK::update()
 {
+    int now = GetNowCount();
+
+    char buffer[128];
+ 
+    sprintf_s(buffer, "特定ポイント１通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
+    DrawStringToHandle(200, 180, buffer, GetColor(255, 255, 255), fontHandle);
+    //int a = 5;
+    //const char* c = "55";
+    //DrawStringToHandle(600, 200, c, GetColor(255, 255, 255), fontHandle);
+
+
     DrawFormatString(700, 550, GetColor(255, 255, 255), "debug: random_block_number: %d", getGame()->get_random_block_number());
     DrawFormatString(700, 570, GetColor(255, 255, 255), "debug: _block[0].g: %d", _block[0].g);
 
@@ -208,8 +224,10 @@ void BLOCK::update()
                             }
                         }
                         _block[0].blockStatus = 0; //積み上がる
-                        PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
-                        break;
+                        PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+                        _block[0].is2 = false;
+                        //break;
+                        return;
                     }
 
             }
@@ -218,7 +236,7 @@ void BLOCK::update()
         }
         if (_block[0].movableDown)
         _block[0].vecMap.y += 1;
-        
+        _block[0].is2 = false;
         getGame()->set_pressDown(1);
     }
 
@@ -249,8 +267,11 @@ void BLOCK::update()
                                     }
                                 }
                                 _block[0].blockStatus = 0; //積み上がる
-                                PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
+                                PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
                                 //break;
+                                getGame()->set_pressUp(1);
+                                _block[0].is2 = false;
+                                return;
                             }
 
 
@@ -268,8 +289,152 @@ void BLOCK::update()
         }
 
 
-    int now = GetNowCount();
     
+
+    {
+        for (int i = 0; i < 4;++i)
+        {
+            bool J1breakFlag = false;
+            bool J2breakFlag = false;
+
+            for (int j = 0; j < 4; ++j)
+            {
+                if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                {
+                    if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y + 1, j + _block[0].vecMap.x) != 18)
+                    {
+                        //if (_block[0].blockStatus == 1)
+                        //{
+
+                        //int now = GetNowCount();
+                        //getGame()->set_gameTime(now);
+                        if (!_block[0].is2)
+                        {
+                            _block[0].blockStatus = 2;
+                            _block[0].is2 = true;
+                            getGame()->set_gameTime(now);
+                            getGame()->set_passTime(now);
+
+                            sprintf_s(buffer, "特定ポイント２通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
+                            DrawStringToHandle(200, 260, buffer, GetColor(255, 255, 255), fontHandle);
+
+                            J2breakFlag = true;
+                            break;
+                        }
+                        else
+                        {
+                            J2breakFlag = true;
+                            break;
+                        }
+                        
+                        //}
+
+                        //_block[0].blockStatus = 2;
+
+                        //_block[0].movableDown = false;
+                        //
+                        //for (int i = 0; i < 4; ++i) //積み上がる
+                        //{
+                        //    for (int j = 0; j < 4; ++j)
+                        //    {
+                        //        if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                        //            getGame()->block_stage()->set_stageMap(_block[0].g, _block[0].vecMap.y + i, _block[0].vecMap.x + j);
+                        //    }
+                        //}
+                        //_block[0].blockStatus = 0; //積み上がる
+                        //PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
+                        //break;
+                    }
+                    else
+                    {
+                        //_block[0].blockStatus = 1;
+                        sprintf_s(buffer, "特定ポイント３通過中　blockStatus: %d", _block[0].blockStatus);
+                        DrawStringToHandle(400, 230, buffer, GetColor(255, 255, 255), fontHandle);
+                    }
+                }
+                    if (j == 3) J1breakFlag = true;
+
+                //if (_block[0].blockStatus == 2) break;
+
+                //if (i == 3) _block[0].blockStatus = 1;
+
+            }
+            //if (_block[0].blockStatus == 2) break;
+            //if (!_block[0].movableDown) break;
+
+            if (i==3 && J1breakFlag)
+            {
+                _block[0].blockStatus = 1;
+                //_block[0].is2 = true;
+                //getGame()->set_gameTime(GetNowCount());
+                sprintf_s(buffer, "特定ポイント４通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
+                DrawStringToHandle(200, 300, buffer, GetColor(255, 255, 255), fontHandle);
+            }
+            if (_block[0].blockStatus == 2 && J2breakFlag) break;
+        }
+    }
+    
+
+
+    if (_block[0].blockStatus == 2)
+        if(now - getGame()->get_gameTime() > 2000)
+    {
+            _block[0].blockStatus = 0;
+
+            for (int i = 0; i < 4; ++i) //積み上がる
+            {
+                for (int j = 0; j < 4; ++j)
+                {
+                    if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                        getGame()->block_stage()->set_stageMap(_block[0].g, _block[0].vecMap.y + i, _block[0].vecMap.x + j);
+                }
+            }
+            //_block[0].blockStatus = 0; //積み上がる
+            PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+            _block[0].is2 = false;
+            return;
+    }
+
+
+
+    /*
+    if (_block[0].blockStatus == 2)
+    {
+            for(int i=0; i<4; ++i)
+                for(int j=0; j<4; ++j)
+            if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+            {
+                if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y + 1, j + _block[0].vecMap.x) != 18 &&
+                    (now - getGame()->get_gameTime()) > 2000)
+                {
+                    _block[0].blockStatus = 0;
+
+                    for (int i = 0; i < 4; ++i) //積み上がる
+                    {
+                        for (int j = 0; j < 4; ++j)
+                        {
+                            if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                                getGame()->block_stage()->set_stageMap(_block[0].g, _block[0].vecMap.y + i, _block[0].vecMap.x + j);
+                        }
+                    }
+                    //_block[0].blockStatus = 0; //積み上がる
+                    PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
+                    _block[0].is2 = false;
+                    return;
+                }
+            }
+
+            if (now - getGame()->get_passTime() > 500)
+            {
+                _block[0].blockStatus = 1;
+                _block[0].is2 = false;
+                //_block[0].vecMap.y += 1;
+            }
+    }
+    */
+
+
+    /*
     if (now - getGame()->get_passTime() > 1000)//(now - e_passTime() > 1000)
     {
         _block[0].movableDown = true;
@@ -281,8 +446,9 @@ void BLOCK::update()
             for (int j = 0; j < 4; ++j)
             {
                 if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
-                    if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y+1, j + _block[0].vecMap.x) != 18)
+                    if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y + 1, j + _block[0].vecMap.x) != 18)
                     {
+                        _block[0].blockStatus = 2;
                         _block[0].movableDown = false;
 
                         for (int i = 0; i < 4; ++i) //積み上がる
@@ -320,7 +486,73 @@ void BLOCK::update()
         //_block[0].vecMap.y += 1;
         //getGame()->block_stage()->set_stageMap(0, _block[0].vecMap.y)
     }
+    }
+    */
+
+    
+    if (_block[0].blockStatus == 1)
+    {
+    
+    
+    if (now - getGame()->get_passTime() > 500)//(now - e_passTime() > 1000)
+    {
+        _block[0].movableDown = true;
+        //_block[0].vec.y += 32.0f;
+        getGame()->set_passTime(now);
+
+        for (int i = 0; i < 4;++i)
+        {
+            for (int j = 0; j < 4; ++j)
+            {
+                if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                    if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y + 1, j + _block[0].vecMap.x) != 18)
+                    {
+                        _block[0].movableDown = false;
+
+                        for (int i = 0; i < 4; ++i) //積み上がる
+                        {
+                            for (int j = 0; j < 4; ++j)
+                            {
+                                if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                                    getGame()->block_stage()->set_stageMap(_block[0].g, _block[0].vecMap.y + i, _block[0].vecMap.x + j);
+                            }
+                        }
+                        _block[0].blockStatus = 0; //積み上がる
+                        PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+                        _block[0].is2 = false;
+                        return;
+                        //break;
+                    }
+
+            }
+            if (!_block[0].movableDown) break;
+        }
+
+        //if(_block[0].movableDown) //積み上がらない
+        _block[0].vecMap.y += 1; //積み上がらない
+        _block[0].is2 = false;
+        //else //積み上がる
+        //{
+        //    for (int i = 0; i < 4; ++i)
+        //    {
+        //        for (int j = 0; j < 4; ++j)
+        //        {
+        //            if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+        //                getGame()->block_stage()->set_stageMap(_block[0].g, _block[0].vecMap.y +i, _block[0].vecMap.x +j);
+        //        }
+        //    }
+        //    _block[0].blockStatus = 0;
+        //}
+
+        //_block[0].vecMap.y += 1;
+        //getGame()->block_stage()->set_stageMap(0, _block[0].vecMap.y)
+    }
+    //_block[0].vecMap.y += 1; //積み上がらない
+    //_block[0].is2 = false;
+    //getGame()->set_passTime(now);
+    }
 }
+
 
 void BLOCK::draw()
 {

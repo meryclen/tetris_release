@@ -37,6 +37,7 @@ public:
 	{
 		KOKA,
 		KAKO,
+		KA,
 		DON,
 		SOUND_NUM
 	};
@@ -97,6 +98,9 @@ public:
 	}
 
 	int get_startTime() { return startTime; }
+
+	int get_gameTime() { return gameTime; }
+	void set_gameTime(int t) { gameTime = t; }
 
 	int get_passTime() { return passTime; }
 	void set_passTime(int t) { passTime = t; }

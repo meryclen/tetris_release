@@ -7,15 +7,18 @@
 class BLOCK :
     public GAME_OBJECT
 {
-	int soundHandle[10];
+	int fontHandle = CreateFontToHandle(NULL, 40, 3);
+
+	int soundHandle[12];
 	//int pressDown = 0;
 
 public:
 	struct DATA
-	{		
-
+	{
+		
 		int blockHandle[20];
 		
+		bool is2 = false;
 
 		VECTOR vec = VGet(0.0f, 0.0f, 0.0f);
 		VECTOR vecMap = VGet(0.0f, 0.0f, 0.0f);
