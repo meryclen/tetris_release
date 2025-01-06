@@ -39,6 +39,7 @@ public:
 		KAKO,
 		KA,
 		DON,
+		PIRORON,
 		SOUND_NUM
 	};
 
@@ -50,6 +51,8 @@ private:
 	int previousTime = 0;
 	int gameTime = 0;
 	int passTime = 0;
+	int pressLeftTime = 0;
+	int pressRightTime = 0;
 
 	double deltaTime = 0.0;
 	//static const int e_passTime = 0;
@@ -69,7 +72,7 @@ private:
 	//std::thread threads;
 	//std::mutex mtx;
 	bool isFull = true;
-
+	bool isTetris = false;
 
 	//
 	int soundON[GAME::SOUND_NUM] = { 0 };
@@ -104,6 +107,12 @@ public:
 
 	int get_passTime() { return passTime; }
 	void set_passTime(int t) { passTime = t; }
+
+	int get_pressLeftTime() { return pressLeftTime; }
+	void set_pressLeftTime(int t) { pressLeftTime = t; }
+	
+	int get_pressRightTime() { return pressRightTime; }
+	void set_pressRightTime(int t) { pressRightTime = t; }
 
 	
 	int get_pressX() { return pressX; }

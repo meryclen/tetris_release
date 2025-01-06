@@ -9,7 +9,6 @@ class BLOCK :
 {
 	int fontHandle = CreateFontToHandle(NULL, 40, 3);
 
-	int soundHandle[12];
 	//int pressDown = 0;
 
 public:
@@ -17,6 +16,7 @@ public:
 	{
 		
 		int blockHandle[20];
+		int soundHandle[12];
 		
 		bool is2 = false;
 
@@ -34,7 +34,7 @@ public:
 		int h = GAME::BLOCK_ANGLE_0;
 
 
-		int blockStatus = 1; //0:delete 1:normal 
+		int blockStatus = 1; //0:delete 1:normal 2:‚·‚®‰º‚ÉƒuƒƒbƒN‚ ‚è
 
 		int moveFlag;
 
@@ -249,7 +249,7 @@ public:
 
 	int get_vecMap_y() { return _block[0].vecMap.y; }
 
-	//int get_soundHandle(int i) { return soundHandle[i]; };
+	int get_soundHandle(int i) { return _block[0].soundHandle[i]; };
 	
 
 };

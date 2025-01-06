@@ -1,37 +1,4 @@
-﻿  BLOCK.cpp
+﻿  GAME.cpp
 C:\Users\Administrator\source\repos\tetris\BLOCK.h(248,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\Administrator\source\repos\tetris\BLOCK.h(250,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(81,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(81,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(123,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(123,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(162,115): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(162,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(188,115): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(188,70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(214,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(214,87): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(223,132): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(223,108): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(256,102): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(256,95): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(266,148): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(266,124): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(304,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(304,87): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(389,120): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(389,96): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(508,94): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(508,87): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(517,132): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(517,108): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  BLOCK_STAGE.cpp
-C:\Users\Administrator\source\repos\tetris\BLOCK.h(248,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.h(250,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
-  GAME.cpp
-C:\Users\Administrator\source\repos\tetris\BLOCK.h(248,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
-C:\Users\Administrator\source\repos\tetris\BLOCK.h(250,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
-  main.cpp
-  コードを生成中...
-  LINK : 前回のインクリメンタル リンクで C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   DxLib_0000.vcxproj -> C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe

@@ -9,10 +9,11 @@
 BLOCK::BLOCK(class GAME* game):
 GAME_OBJECT(game)
 {
-    soundHandle[GAME::KOKA] = LoadSoundMem("sound/koka.mp3");
-    soundHandle[GAME::KAKO] = LoadSoundMem("sound/kako.mp3");
-    soundHandle[GAME::KA] = LoadSoundMem("sound/ka.mp3");
-    soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
+    _block[0].soundHandle[GAME::KOKA] = LoadSoundMem("sound/koka.mp3");
+    _block[0].soundHandle[GAME::KAKO] = LoadSoundMem("sound/kako.mp3");
+    _block[0].soundHandle[GAME::KA] = LoadSoundMem("sound/ka.mp3");
+    _block[0].soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
+    _block[0].soundHandle[GAME::PIRORON] = LoadSoundMem("sound/piroron.mp3");
 }
 
 BLOCK::~BLOCK()
@@ -102,7 +103,7 @@ void BLOCK::update()
 
                 if (getGame()->get_pressX() == 0)
                 {
-                    PlaySoundMem(soundHandle[GAME::KOKA], DX_PLAYTYPE_BACK);
+                    PlaySoundMem(_block[0].soundHandle[GAME::KOKA], DX_PLAYTYPE_BACK);
                     //getGame()->set_soundON(0,1);
                 }
 
@@ -142,7 +143,7 @@ void BLOCK::update()
 
             if (getGame()->get_pressX() == 0)
             {
-                PlaySoundMem(soundHandle[GAME::KAKO], DX_PLAYTYPE_BACK);
+                PlaySoundMem(_block[0].soundHandle[GAME::KAKO], DX_PLAYTYPE_BACK);
                 //getGame()->set_soundON(0,1);
             }
 
@@ -174,6 +175,28 @@ void BLOCK::update()
             else _block[0].movableLeft = true;
 
             getGame()->set_pressLeft(1);
+            getGame()->set_pressLeftTime(now);
+        }
+        else if(now - getGame()->get_pressLeftTime() > 200)
+        {
+            for (int i = 0; i < 4;++i)
+            {
+                for (int j = 0; j < 4; ++j)
+                {
+                    if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                        if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y, j + _block[0].vecMap.x - 1) != 18)
+                        {
+                            _block[0].movableLeft = false;
+                            break;
+                        }
+
+                }
+                if (!_block[0].movableLeft) break;
+
+            }
+            if (_block[0].movableLeft)
+                _block[0].vecMap.x += -1;
+            else _block[0].movableLeft = true;
         }
 
     
@@ -200,7 +223,31 @@ void BLOCK::update()
             else _block[0].movableRight = true;
 
             getGame()->set_pressRight(1);
+            getGame()->set_pressRightTime(now);
         }
+        else if (now - getGame()->get_pressRightTime() > 200)
+        {
+            for (int i = 0; i < 4;++i)
+            {
+                for (int j = 0; j < 4; ++j)
+                {
+                    if (_block[0].blockMap[_block[0].g][_block[0].h][i][j] == _block[0].g)
+                        if (getGame()->block_stage()->get_stageMap(i + _block[0].vecMap.y, j + _block[0].vecMap.x + 1) != 18)
+                        {
+                            _block[0].movableRight = false;
+                            break;
+                        }
+
+                }
+                if (!_block[0].movableRight) break;
+
+            }
+            if (_block[0].movableRight)
+                _block[0].vecMap.x += 1;
+            else _block[0].movableRight = true;
+        }
+
+
 
     
     if (CheckHitKey(KEY_INPUT_DOWN))
@@ -224,7 +271,7 @@ void BLOCK::update()
                             }
                         }
                         _block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-                        PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+                        PlaySoundMem(_block[0].soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
                         _block[0].is2 = false;
                         //break;
                         return;
@@ -267,7 +314,7 @@ void BLOCK::update()
                                     }
                                 }
                                 _block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-                                PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+                                PlaySoundMem(_block[0].soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
                                 //break;
                                 getGame()->set_pressUp(1);
                                 _block[0].is2 = false;
@@ -390,7 +437,7 @@ void BLOCK::update()
                 }
             }
             //_block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-            PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+            PlaySoundMem(_block[0].soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
             _block[0].is2 = false;
             return;
     }
@@ -518,7 +565,7 @@ void BLOCK::update()
                             }
                         }
                         _block[0].blockStatus = 0; //êœÇ›è„Ç™ÇÈ
-                        PlaySoundMem(soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
+                        PlaySoundMem(_block[0].soundHandle[GAME::KA], DX_PLAYTYPE_BACK);
                         _block[0].is2 = false;
                         return;
                         //break;

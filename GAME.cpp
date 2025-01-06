@@ -35,7 +35,7 @@ GAME::GAME()
 		_block[i] = new BLOCK(this);
 	}
 
-
+	//soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
 }
 
 GAME::~GAME()
@@ -93,13 +93,9 @@ void GAME::run()
 			//PlaySoundMem(soundHandle[GAME::DON], DX_PLAYTYPE_BACK);
 
 
-			delete block(0);
-			_block[0] = nullptr;
-
-
-
-			_block[0] = new BLOCK(this);
-
+			/*
+			
+			*/
 			
 
 			isFull = true;
@@ -276,6 +272,22 @@ void GAME::run()
 			for (int i = 0; i < 20; ++i)
 				for (int j = 1; j <= 10; ++j)
 					block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
+
+			if (a==1 || a==2 || a==3)
+			{
+				PlaySoundMem(block(0)->get_soundHandle(GAME::DON), DX_PLAYTYPE_BACK);
+				//isTetris = true;
+			}
+			else if(a==4)
+			{
+				PlaySoundMem(block(0)->get_soundHandle(GAME::PIRORON), DX_PLAYTYPE_BACK);
+			}
+
+			delete block(0);
+			_block[0] = nullptr;
+
+			_block[0] = new BLOCK(this);
+
 
 			for (int i=0; i<4; ++i)
 			full_array[i] = -1;
