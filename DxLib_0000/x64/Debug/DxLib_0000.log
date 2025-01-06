@@ -25,4 +25,13 @@ C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(508,94): warning C4244: '�
 C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(508,87): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(517,132): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
 C:\Users\Administrator\source\repos\tetris\BLOCK.cpp(517,108): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  BLOCK_STAGE.cpp
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(248,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(250,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+  GAME.cpp
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(248,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+C:\Users\Administrator\source\repos\tetris\BLOCK.h(250,46): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+  main.cpp
+  コードを生成中...
+  LINK : 前回のインクリメンタル リンクで C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
   DxLib_0000.vcxproj -> C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe
