@@ -3,7 +3,7 @@
 #include <thread>
 #include <mutex>
 
-
+#include <DxLib.h>
 
 class GAME
 {
@@ -45,6 +45,10 @@ public:
 
 
 private:
+
+	char buffer[128];
+	int fontHandle = CreateFontToHandle(NULL, 40, 3);
+
 	int gameStatus = 0; //0:正常　1:ゲームオーバー
 //public:
 	int startTime = 0;
@@ -77,6 +81,7 @@ private:
 	//
 	int soundON[GAME::SOUND_NUM] = { 0 };
 
+	int score = 0;
 
 
 private:

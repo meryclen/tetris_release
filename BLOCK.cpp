@@ -52,16 +52,30 @@ void BLOCK::init()
     
     getGame()->set_random_block_number(++n);
     
+    
 }
 
 void BLOCK::update()
 {
+
+    for (int i = 0; i < 4;++i)
+    {
+        for (int j = 0; j < 4; ++j)
+        {
+            if (_block[0].blockMap[getGame()->get_random_block(getGame()->get_random_block_number()) % GAME::BLOCK_TYPE_NUM][0][i][j] == getGame()->get_random_block(getGame()->get_random_block_number()) % GAME::BLOCK_TYPE_NUM)
+                DrawRotaGraph(450 + 32 * j, 50 + 32 * i, 1, 0, _block[0].blockHandle[_block[0].blockMap[getGame()->get_random_block(getGame()->get_random_block_number()) % GAME::BLOCK_TYPE_NUM][0][i][j]], TRUE, FALSE);
+
+        }
+
+    }
+
+
     int now = GetNowCount();
 
     char buffer[128];
  
-    sprintf_s(buffer, "特定ポイント１通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
-    DrawStringToHandle(200, 180, buffer, GetColor(255, 255, 255), fontHandle);
+    //sprintf_s(buffer, "特定ポイント１通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
+    //DrawStringToHandle(200, 180, buffer, GetColor(255, 255, 255), fontHandle);
     //int a = 5;
     //const char* c = "55";
     //DrawStringToHandle(600, 200, c, GetColor(255, 255, 255), fontHandle);
@@ -362,8 +376,8 @@ void BLOCK::update()
                             getGame()->set_gameTime(now);
                             getGame()->set_passTime(now);
 
-                            sprintf_s(buffer, "特定ポイント２通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
-                            DrawStringToHandle(200, 260, buffer, GetColor(255, 255, 255), fontHandle);
+                            //sprintf_s(buffer, "特定ポイント２通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
+                            //DrawStringToHandle(200, 260, buffer, GetColor(255, 255, 255), fontHandle);
 
                             J2breakFlag = true;
                             break;
@@ -395,8 +409,8 @@ void BLOCK::update()
                     else
                     {
                         //_block[0].blockStatus = 1;
-                        sprintf_s(buffer, "特定ポイント３通過中　blockStatus: %d", _block[0].blockStatus);
-                        DrawStringToHandle(400, 230, buffer, GetColor(255, 255, 255), fontHandle);
+                        //sprintf_s(buffer, "特定ポイント３通過中　blockStatus: %d", _block[0].blockStatus);
+                        //DrawStringToHandle(400, 230, buffer, GetColor(255, 255, 255), fontHandle);
                     }
                 }
                     if (j == 3) J1breakFlag = true;
@@ -414,8 +428,8 @@ void BLOCK::update()
                 _block[0].blockStatus = 1;
                 //_block[0].is2 = true;
                 //getGame()->set_gameTime(GetNowCount());
-                sprintf_s(buffer, "特定ポイント４通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
-                DrawStringToHandle(200, 300, buffer, GetColor(255, 255, 255), fontHandle);
+                //sprintf_s(buffer, "特定ポイント４通過中　blockStatus: %d　_block[0].is2: %d", _block[0].blockStatus, _block[0].is2);
+                //DrawStringToHandle(200, 300, buffer, GetColor(255, 255, 255), fontHandle);
             }
             if (_block[0].blockStatus == 2 && J2breakFlag) break;
         }

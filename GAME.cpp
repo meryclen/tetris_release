@@ -65,6 +65,7 @@ void GAME::run()
 
 	while (ProcessMessage() == 0)
 	{
+		int a = 0;
 		
 
 		if (CheckHitKey(KEY_INPUT_X) == 0)
@@ -102,7 +103,7 @@ void GAME::run()
 
 			//for (int i = 19; i >= 0; --i)
 			//{
-			int a = 0;
+			//int a = 0;
 			for (int l = 19; l >= 0; --l)
 			{
 				for (int k = 1; k <= 10; ++k)
@@ -269,20 +270,7 @@ void GAME::run()
 			}*/
 
 
-			for (int i = 0; i < 20; ++i)
-				for (int j = 1; j <= 10; ++j)
-					block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
-
-			if (a==1 || a==2 || a==3)
-			{
-				PlaySoundMem(block(0)->get_soundHandle(GAME::DON), DX_PLAYTYPE_BACK);
-				//isTetris = true;
-			}
-			else if(a==4)
-			{
-				PlaySoundMem(block(0)->get_soundHandle(GAME::PIRORON), DX_PLAYTYPE_BACK);
-			}
-
+			
 			delete block(0);
 			_block[0] = nullptr;
 
@@ -508,6 +496,9 @@ void GAME::run()
 				//}				
 				*/
 
+
+
+
 			
 		}
 
@@ -521,12 +512,55 @@ void GAME::run()
 		//threads.join();
 
 		_block_stage->draw();
-		DrawFormatString(400, 200, GetColor(255, 255, 255), "Game Over Flag: %d",gameStatus);
+		//DrawFormatString(400, 200, GetColor(255, 255, 255), "Game Over Flag: %d",gameStatus);
+		
+
+		
+		if (a == 1)
+		{
+			a = 0;
+			PlaySoundMem(block(0)->get_soundHandle(GAME::DON), DX_PLAYTYPE_BACK);
+			//isTetris = true;
+			score += 40;
+		}
+
+		if (a == 2)
+		{
+			a = 0;
+			PlaySoundMem(block(0)->get_soundHandle(GAME::DON), DX_PLAYTYPE_BACK);
+			score += 100;
+		}
+
+		if (a == 3)
+		{
+			a = 0;
+			PlaySoundMem(block(0)->get_soundHandle(GAME::DON), DX_PLAYTYPE_BACK);
+			score += 300;
+		}
+
+		if (a == 4)
+		{
+			a = 0;
+			PlaySoundMem(block(0)->get_soundHandle(GAME::PIRORON), DX_PLAYTYPE_BACK);
+			score += 1200;
+		}
+		sprintf_s(buffer, "SCORE: %d", score);
+		DrawStringToHandle(500, 300, buffer, GetColor(255, 127, 127), fontHandle);
+
+
+		for (int i = 0; i < 20; ++i)
+			for (int j = 1; j <= 10; ++j)
+				block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
+
+
+
 		if (gameStatus == 1)
 		{
 			_block[0]->draw();
 			gameStatus = 0;
-			DrawFormatString(400, 300, GetColor(255, 255, 255), "Game Over");
+			//DrawFormatString(400, 300, GetColor(255, 255, 255), "Game Over");
+			sprintf_s(buffer, "Game Over");
+			DrawStringToHandle(400, 250, buffer, GetColor(255, 127, 127), fontHandle);
 			ScreenFlip();
 			break;
 			//if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
