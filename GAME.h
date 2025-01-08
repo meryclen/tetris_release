@@ -49,6 +49,9 @@ public:
 private:
 
 	char buffer[128];
+	char buffer1[256];
+	std::string line;
+	//const char* _Filename;
 	int fontHandle = CreateFontToHandle(NULL, 40, 3);
 
 	int gameStatus = 0; //0:正常　1:ゲームオーバー
@@ -85,10 +88,11 @@ private:
 
 	int score = 0;
 	//std::ofstream scoreFile("score.txt", std::ios::app);
-	//std::ofstream scoreFile;
+	std::ofstream scoreFile;
+	std::ifstream stream;
 
-	
-
+	//std::ofstream scoreFile(const char*, std::ios::openmode);
+	//std::ofstream stream("score.txt");
 
 private:
 	class BLOCK_STAGE* _block_stage;
@@ -155,4 +159,7 @@ public:
 	//
 	int get_soundON(int i) { return soundON[i]; }
 	void set_soundON(int i,int j) { soundON[i] = j; }
+
+	//std::ofstream stream("score.txt");
+	//std::ofstream scoreFile(*a, *b);
 };

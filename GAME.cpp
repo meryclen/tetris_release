@@ -9,9 +9,11 @@
 
 #include <iostream>
 #include <fstream>
+#include <string>
 
 #include <time.h>
 
+#include <cstdlib>
 //std::mutex mtx;
 //std::vector<std::thread> threads;
 
@@ -43,8 +45,9 @@ GAME::GAME()
 
 	//soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
 	
-	
+	//scoreFile("score.txt", std::ios::app);
 	//Now = std::time(nullptr);
+	//std::ifstream stream("score.txt");
 }
 
 GAME::~GAME()
@@ -56,8 +59,9 @@ GAME::~GAME()
 		if (_block[i] != nullptr)
 			delete _block[i];
 	}
-
+	//std::ofstream scoreFile("score.txt", std::ios::app);
 	//scoreFile.close();
+	//scoreFile("score.txt", std::ios::app).close();
 }
 
 void GAME::run()
@@ -558,6 +562,33 @@ void GAME::run()
 		sprintf_s(buffer, "SCORE: %d", score);
 		DrawStringToHandle(500, 300, buffer, GetColor(255, 127, 127), fontHandle);
 
+		std::ifstream stream("score.txt");
+		//stream.open("score.txt", std::ios::in) ;
+		//stream >> buffer1;
+
+		//sprintf_s(buffer1, "%s", stream);
+		//DrawStringToHandle(500, 350, buffer1, GetColor(255, 255, 255), fontHandle);
+
+
+		stream.read((char*)buffer1, sizeof(buffer1));
+		DrawStringToHandle(500, 350, buffer1, GetColor(255, 255, 255), fontHandle);
+
+		//while (!stream.eof())
+		//{
+			//int i = 0;
+			//for (int i = 0; i < 2; ++i)
+			//{
+			//stream >> line;
+			//stream >> buffer1;
+			//std::getline(stream, line);
+			//line >> buffer1;
+			//sprintf_s(buffer1, "%s", line);
+			//sprintf_s(buffer1,line);
+			//DrawStringToHandle(500, 350, buffer1, GetColor(255, 255, 255), fontHandle);
+			//}
+			//}
+			//i += 20;
+		//}
 
 		//scoreFile("score.txt", std::ios::app);
 		//scoreFile.close();
@@ -577,7 +608,8 @@ void GAME::run()
 			DrawStringToHandle(400, 250, buffer, GetColor(255, 127, 127), fontHandle);
 			ScreenFlip();
 
-			std::ofstream scoreFile("score.txt", std::ios::app);
+			//scoreFile(
+			//scoreFile("score.txt", std::ios::app);
 
 			time_t jikan = time(NULL);
 			struct tm imanojikan {};
@@ -592,8 +624,12 @@ void GAME::run()
 			//std::time_t* Now;
 			//std::time_t time(&Now);
 			//time_t 
-			scoreFile << jikan << " " << imanojikan.tm_year + 1900 << ":" << imanojikan.tm_mon + 1 << ":" << imanojikan.tm_mday << ":" << imanojikan.tm_hour << ":" << imanojikan.tm_min << ":" << imanojikan.tm_sec << " " << score << std::endl;
-
+			//_Filename = "score.txt";
+			std::ofstream scoreFile("score.txt", std::ios::app);
+			scoreFile//(_Filename, std::ios::app) 
+			<< jikan << " " << imanojikan.tm_year + 1900 << ":" << imanojikan.tm_mon + 1 << ":" << imanojikan.tm_mday << ":" << imanojikan.tm_hour << ":" << imanojikan.tm_min << ":" << imanojikan.tm_sec << " " << score << std::endl;
+			scoreFile.close();
+			stream.close();
 			break;
 			//if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
 		}
