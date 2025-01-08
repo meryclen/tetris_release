@@ -4,6 +4,8 @@
 #include <mutex>
 
 #include <DxLib.h>
+#include <iostream>
+#include <fstream>
 
 class GAME
 {
@@ -82,6 +84,10 @@ private:
 	int soundON[GAME::SOUND_NUM] = { 0 };
 
 	int score = 0;
+	//std::ofstream scoreFile("score.txt", std::ios::app);
+	//std::ofstream scoreFile;
+
+	
 
 
 private:

@@ -6,6 +6,12 @@
 #include <vector>
 #include <thread>
 #include <mutex>
+
+#include <iostream>
+#include <fstream>
+
+#include <time.h>
+
 //std::mutex mtx;
 //std::vector<std::thread> threads;
 
@@ -36,6 +42,9 @@ GAME::GAME()
 	}
 
 	//soundHandle[GAME::DON] = LoadSoundMem("sound/don.mp3");
+	
+	
+	//Now = std::time(nullptr);
 }
 
 GAME::~GAME()
@@ -47,6 +56,8 @@ GAME::~GAME()
 		if (_block[i] != nullptr)
 			delete _block[i];
 	}
+
+	//scoreFile.close();
 }
 
 void GAME::run()
@@ -62,7 +73,7 @@ void GAME::run()
 
 	int full_array[4] = { -1,-1,-1,-1 };
 
-
+	//scoreFile.close();
 	while (ProcessMessage() == 0)
 	{
 		int a = 0;
@@ -548,6 +559,9 @@ void GAME::run()
 		DrawStringToHandle(500, 300, buffer, GetColor(255, 127, 127), fontHandle);
 
 
+		//scoreFile("score.txt", std::ios::app);
+		//scoreFile.close();
+		
 		for (int i = 0; i < 20; ++i)
 			for (int j = 1; j <= 10; ++j)
 				block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
@@ -562,6 +576,24 @@ void GAME::run()
 			sprintf_s(buffer, "Game Over");
 			DrawStringToHandle(400, 250, buffer, GetColor(255, 127, 127), fontHandle);
 			ScreenFlip();
+
+			std::ofstream scoreFile("score.txt", std::ios::app);
+
+			time_t jikan = time(NULL);
+			struct tm imanojikan {};
+			errno_t error;
+
+			error = localtime_s(&imanojikan, &jikan);
+
+
+			//std::time_t t(NULL);
+			//struct tm tim = *localtime(&t);
+
+			//std::time_t* Now;
+			//std::time_t time(&Now);
+			//time_t 
+			scoreFile << jikan << " " << imanojikan.tm_year + 1900 << ":" << imanojikan.tm_mon + 1 << ":" << imanojikan.tm_mday << ":" << imanojikan.tm_hour << ":" << imanojikan.tm_min << ":" << imanojikan.tm_sec << " " << score << std::endl;
+
 			break;
 			//if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
 		}
