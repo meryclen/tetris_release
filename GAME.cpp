@@ -153,7 +153,8 @@ void GAME::run()
 
 
 			int b = 19;
-			
+
+			if (a != 0)
 			for (int i = 19; i >= 0; --i)
 			{
 				for (int l = 0; l < 4; ++l)
@@ -530,6 +531,18 @@ void GAME::run()
 		//DrawFormatString(400, 200, GetColor(255, 255, 255), "Game Over Flag: %d",gameStatus);
 		
 
+		if (a != 0)
+		{
+			for (int i = 0; i < 20; ++i)
+				for (int j = 1; j <= 10; ++j)
+					block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
+
+			for (int i = 0; i < 20; ++i)
+				for (int j = 1; j <= 10; ++j)
+					block_stage()->set_stageMap1(18, i, j);
+		}
+
+		
 		
 		if (a == 1)
 		{
@@ -593,10 +606,7 @@ void GAME::run()
 		//scoreFile("score.txt", std::ios::app);
 		//scoreFile.close();
 		
-		for (int i = 0; i < 20; ++i)
-			for (int j = 1; j <= 10; ++j)
-				block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
-
+		
 
 
 		if (gameStatus == 1)
