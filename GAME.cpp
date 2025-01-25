@@ -23,6 +23,8 @@ double _deltaTime = 0.0;
 int _previousTime = 0;
 
 //void kari();
+void heavyTask();
+void heavyTask1();
 
 
 GAME::GAME()
@@ -48,6 +50,8 @@ GAME::GAME()
 	//scoreFile("score.txt", std::ios::app);
 	//Now = std::time(nullptr);
 	//std::ifstream stream("score.txt");
+
+	//threads.emplace_back(kari);
 }
 
 GAME::~GAME()
@@ -531,17 +535,32 @@ void GAME::run()
 		//DrawFormatString(400, 200, GetColor(255, 255, 255), "Game Over Flag: %d",gameStatus);
 		
 
+			std::vector<std::thread> threads;
 		if (a != 0)
 		{
-			for (int i = 0; i < 20; ++i)
+			threads.emplace_back(&GAME::kari,this);
+			//threads.emplace_back(&heavyTask);
+			//threads.emplace_back(&heavyTask1);
+			
+			for(int i=0; i<1; ++i)
+				threads[i].join();
+
+
+			
+			//kari();
+			/*for (int i = 0; i < 20; ++i)
 				for (int j = 1; j <= 10; ++j)
 					block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
 
 			for (int i = 0; i < 20; ++i)
 				for (int j = 1; j <= 10; ++j)
-					block_stage()->set_stageMap1(18, i, j);
+					block_stage()->set_stageMap1(18, i, j);*/
 		}
 
+		//threads[0].join();
+
+		//threads.emplace_back(heavyTask);
+		//threads[1].join();
 		
 		
 		if (a == 1)
@@ -572,6 +591,8 @@ void GAME::run()
 			PlaySoundMem(block(0)->get_soundHandle(GAME::PIRORON), DX_PLAYTYPE_BACK);
 			score += 1200;
 		}
+
+
 		sprintf_s(buffer, "SCORE: %d", score);
 		DrawStringToHandle(500, 300, buffer, GetColor(255, 127, 127), fontHandle);
 
@@ -605,56 +626,57 @@ void GAME::run()
 
 		//scoreFile("score.txt", std::ios::app);
 		//scoreFile.close();
-		
-		
 
 
-		if (gameStatus == 1)
-		{
-			_block[0]->draw();
-			gameStatus = 0;
-			//DrawFormatString(400, 300, GetColor(255, 255, 255), "Game Over");
-			sprintf_s(buffer, "Game Over");
-			DrawStringToHandle(400, 250, buffer, GetColor(255, 127, 127), fontHandle);
-			ScreenFlip();
-
-			//scoreFile(
-			//scoreFile("score.txt", std::ios::app);
-
-			time_t jikan = time(NULL);
-			struct tm imanojikan {};
-			errno_t error;
-
-			error = localtime_s(&imanojikan, &jikan);
+		//threads[0].join();
 
 
-			//std::time_t t(NULL);
-			//struct tm tim = *localtime(&t);
+if (gameStatus == 1)
+{
+	_block[0]->draw();
+	gameStatus = 0;
+	//DrawFormatString(400, 300, GetColor(255, 255, 255), "Game Over");
+	sprintf_s(buffer, "Game Over");
+	DrawStringToHandle(400, 250, buffer, GetColor(255, 127, 127), fontHandle);
+	ScreenFlip();
 
-			//std::time_t* Now;
-			//std::time_t time(&Now);
-			//time_t 
-			//_Filename = "score.txt";
-			std::ofstream scoreFile("score.txt", std::ios::app);
-			scoreFile//(_Filename, std::ios::app) 
-			<< jikan << " " << imanojikan.tm_year + 1900 << ":" << imanojikan.tm_mon + 1 << ":" << imanojikan.tm_mday << ":" << imanojikan.tm_hour << ":" << imanojikan.tm_min << ":" << imanojikan.tm_sec << " " << score << std::endl;
-			scoreFile.close();
-			stream.close();
-			break;
-			//if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
-		}
+	//scoreFile(
+	//scoreFile("score.txt", std::ios::app);
 
+	time_t jikan = time(NULL);
+	struct tm imanojikan {};
+	errno_t error;
 
-		_block[0]->update();
-		_block[0]->draw();
+	error = localtime_s(&imanojikan, &jikan);
 
 
-		DrawFormatString(500, 650, GetColor(200, 0, 0), "Press Escape Button\n");
+	//std::time_t t(NULL);
+	//struct tm tim = *localtime(&t);
 
-		if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
+	//std::time_t* Now;
+	//std::time_t time(&Now);
+	//time_t 
+	//_Filename = "score.txt";
+	std::ofstream scoreFile("score.txt", std::ios::app);
+	scoreFile//(_Filename, std::ios::app) 
+		<< jikan << " " << imanojikan.tm_year + 1900 << ":" << imanojikan.tm_mon + 1 << ":" << imanojikan.tm_mday << ":" << imanojikan.tm_hour << ":" << imanojikan.tm_min << ":" << imanojikan.tm_sec << " " << score << std::endl;
+	scoreFile.close();
+	stream.close();
+	break;
+	//if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
+}
 
-		//threads.join();
-		ScreenFlip();
+
+_block[0]->update();
+_block[0]->draw();
+
+
+DrawFormatString(500, 650, GetColor(200, 0, 0), "Press Escape Button\n");
+
+if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
+
+//threads.join();
+ScreenFlip();
 	}
 
 }
@@ -680,9 +702,75 @@ void GAME::run()
 //	//mtx.unlock();
 //}
 
-//void kari()
-//{
-//	getGame()->block_stage()->draw();
-//	_block[0]->update();
-//	_block[0]->draw();
-//}
+void GAME::kari()
+{
+	//int a = get_startTime();
+	//block_stage()
+	//	//GAME::block_stage()->draw();
+	//_block[0]->update();
+	//_block[0]->draw();
+
+	for (int i = 0; i < 20; ++i)
+		for (int j = 1; j <= 10; ++j)
+			block_stage()->set_stageMap(block_stage()->get_stageMap1(i, j), i, j);
+
+	for (int i = 0; i < 20; ++i)
+		for (int j = 1; j <= 10; ++j)
+			block_stage()->set_stageMap1(18, i, j);
+}
+
+void heavyTask()
+{
+	
+		//char buffer[128];
+		//int fontHandle = CreateFontToHandle(NULL, 40, 3);
+		
+		
+		int count = 0;
+	
+	for (int i = 0; i < 100000000; ++i)
+	{
+		++count;
+	}
+	/*
+			ClearDrawScreen();
+			sprintf_s(buffer, "heavyTask: %ld", i);
+			DrawStringToHandle(500, 600, buffer, GetColor(255, 0, 0), fontHandle);
+			ScreenFlip();
+		}*/
+
+		/*for(;;)
+		{
+			if (CheckHitKey(KEY_INPUT_SPACE)) break;
+		}*/
+	
+}
+
+void heavyTask1()
+{
+	
+		//char buffer1[128];
+		//int fontHandle = CreateFontToHandle(NULL, 40, 3);
+		//int count = 0;
+
+	int count = 0;
+
+	for (int i = 0; i < 105000000; ++i)
+	{
+		++count;
+	}
+
+		/*for (int i = 0; i < 150; ++i)
+		{
+			ClearDrawScreen();
+			sprintf_s(buffer1, "heavyTask1: %ld", i);
+			DrawStringToHandle(500, 650, buffer1, GetColor(255, 0, 0), fontHandle);
+			ScreenFlip();
+		}*/
+
+		/*while(!0)
+		{
+			if (CheckHitKey(KEY_INPUT_SPACE)) break;
+		}*/
+	
+}

@@ -78,7 +78,7 @@ private:
 	int random_block[1000];
 	int random_block_number = 0;
 
-	//std::thread threads;
+	//std::vector<std::thread> threads;
 	//std::mutex mtx;
 	bool isFull = true;
 	bool isTetris = false;
@@ -162,4 +162,8 @@ public:
 
 	//std::ofstream stream("score.txt");
 	//std::ofstream scoreFile(*a, *b);
+
+	void kari();
+
+	//void heavyTask();
 };
