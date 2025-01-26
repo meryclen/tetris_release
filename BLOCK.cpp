@@ -352,7 +352,7 @@ void BLOCK::update()
 
     
 
-    {
+    
         for (int i = 0; i < 4;++i)
         {
             bool J1breakFlag = false;
@@ -433,12 +433,12 @@ void BLOCK::update()
             }
             if (_block[0].blockStatus == 2 && J2breakFlag) break;
         }
-    }
+    
     
 
 
     if (_block[0].blockStatus == 2)
-        if(now - getGame()->get_gameTime() > 2000)
+        if(now - getGame()->get_gameTime() > 500)
     {
             _block[0].blockStatus = 0;
 
@@ -555,7 +555,7 @@ void BLOCK::update()
     {
     
     
-    if (now - getGame()->get_passTime() > 250)//(now - e_passTime() > 1000)
+    if (now - getGame()->get_passTime() > 125)//(now - e_passTime() > 1000)
     {
         _block[0].movableDown = true;
         //_block[0].vec.y += 32.0f;
