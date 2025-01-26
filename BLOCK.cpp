@@ -555,7 +555,7 @@ void BLOCK::update()
     {
     
     
-    if (now - getGame()->get_passTime() > 500)//(now - e_passTime() > 1000)
+    if (now - getGame()->get_passTime() > 250)//(now - e_passTime() > 1000)
     {
         _block[0].movableDown = true;
         //_block[0].vec.y += 32.0f;
