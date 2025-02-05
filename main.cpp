@@ -48,7 +48,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR IpCmdLine,
 			gameObject.run();
 		}
 
-		while (!(CheckHitKey(KEY_INPUT_RETURN)))
+		while(!0)// (!(CheckHitKey(KEY_INPUT_RETURN)))
 		{
 			//ClearDrawScreen();
 			DrawFormatString(500, 650, GetColor(200, 0, 0), "エンターキーを押すと終了します\n");

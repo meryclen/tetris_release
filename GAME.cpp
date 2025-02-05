@@ -680,7 +680,23 @@ _block[0]->draw();
 
 DrawFormatString(500, 650, GetColor(200, 0, 0), "Press Escape Button\n");
 
-if (CheckHitKey(KEY_INPUT_ESCAPE)) break;
+if (CheckHitKey(KEY_INPUT_ESCAPE))
+{
+	bool breakFlagTemp = false;
+	
+	while (!0)
+	{
+		if (CheckHitKey(KEY_INPUT_SPACE)) break;
+
+			if (CheckHitKey(KEY_INPUT_RETURN))
+			{
+				breakFlagTemp = true;
+				break;
+			}
+	}
+
+	if (breakFlagTemp) break;
+}
 
 //threads.join();
 ScreenFlip();
