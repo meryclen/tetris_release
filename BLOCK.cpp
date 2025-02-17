@@ -191,7 +191,7 @@ void BLOCK::update()
             getGame()->set_pressLeft(1);
             getGame()->set_pressLeftTime(now);
         }
-        else if(now - getGame()->get_pressLeftTime() > 200)
+        else if(now - getGame()->get_pressLeftTime() > 150)
         {
             for (int i = 0; i < 4;++i)
             {
@@ -239,7 +239,7 @@ void BLOCK::update()
             getGame()->set_pressRight(1);
             getGame()->set_pressRightTime(now);
         }
-        else if (now - getGame()->get_pressRightTime() > 200)
+        else if (now - getGame()->get_pressRightTime() > 150)
         {
             for (int i = 0; i < 4;++i)
             {
@@ -438,7 +438,7 @@ void BLOCK::update()
 
 
     if (_block[0].blockStatus == 2)
-        if(now - getGame()->get_gameTime() > 500)
+        if(now - getGame()->get_gameTime() > 250)
     {
             _block[0].blockStatus = 0;
 
@@ -555,7 +555,7 @@ void BLOCK::update()
     {
     
     
-    if (now - getGame()->get_passTime() > 125)//(now - e_passTime() > 1000)
+    if (now - getGame()->get_passTime() > 25)//(now - e_passTime() > 1000)
     {
         _block[0].movableDown = true;
         //_block[0].vec.y += 32.0f;
