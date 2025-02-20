@@ -1,210 +1,613 @@
 ﻿0:ChangeWindowMode実行 
-1:ウインドウモードフラグが立てられました
+0:ウインドウモードフラグが立てられました
 2:ＤＸライブラリの初期化処理開始
 3:	システムの情報を出力します
 3:		ＤＸライブラリ Ver3.24d
-4:		論理プロセッサの数 : 12
-4:		ＯＳ  Windows11 ( Build 22631  )
-104:		現時点のＣＰＵ動作速度：大体3.75GHz
+3:		論理プロセッサの数 : 12
+3:		ＯＳ  Windows11 ( Build 22631  )
+104:		現時点のＣＰＵ動作速度：大体3.79GHz
 104:		ＭＭＸ命令を使用します
 104:		ＳＳＥ命令が使用可能です
-105:		ＳＳＥ２命令が使用可能です
-105:		ＣＰＵベンダ：AuthenticAMD
-107:		ＣＰＵ名：AMD Ryzen 5 3600X 6-Core Processor             
-107:	ＣＯＭの初期化... 成功
-110:	非同期読み込み処理の初期化...成功
-111:	ファイルアクセス処理の初期化...成功
-112:	メモリ総量:16306.43MB  空きメモリ領域:3639.70MB 
+104:		ＳＳＥ２命令が使用可能です
+104:		ＣＰＵベンダ：AuthenticAMD
+105:		ＣＰＵ名：AMD Ryzen 5 3600X 6-Core Processor             
+105:	ＣＯＭの初期化... 成功
+107:	非同期読み込み処理の初期化...成功
+108:	ファイルアクセス処理の初期化...成功
+112:	メモリ総量:16306.43MB  空きメモリ領域:7830.21MB 
 112:	タイマーの精度を検査します
-112:	精度結果 更新回数 マルチメディアタイマー：0  パフォーマンスカウンター：60
-112:	 パフォーマンスカウンターを使用します タイマー精度 : 10000.000000 KHz 
-113:	 
-113:	ソフトの二重起動検査... 二重起動はされていませんでした
-114:	ウインドウクラスを登録します... 登録に成功しました
+114:	精度結果 更新回数 マルチメディアタイマー：0  パフォーマンスカウンター：60
+114:	 パフォーマンスカウンターを使用します タイマー精度 : 10000.000000 KHz 
+114:	 
+114:	ソフトの二重起動検査... 二重起動はされていませんでした
+115:	ウインドウクラスを登録します... 登録に成功しました
 115:	ウインドウモード起動用のウインドウを作成します
 115:	ディスプレイ情報のセットアップ開始
-115:		モニターの数：2  ディスプレイデバイスの数：4
+116:		モニターの数：2  ディスプレイデバイスの数：4
 116:		No.0  モニター名：\\.\DISPLAY1　1920x1080　32bit　240Hz  96x96dpi
-116:		No.1  モニター名：\\.\DISPLAY2　1920x1080　32bit　60Hz  96x96dpi
-143:	ディスプレイ情報のセットアップ完了
-144:	ウインドウ矩形 ( 304, 129 )-( 1600, 888 )
-148:	ウインドウの作成に成功しました
-149:	ウインドウを表示します
-173:	ＩＭＥを無効にしました
-174:	ウインドウスタイルをウインドウモード用に変更します... 完了
-205:	XInput DLL の読み込み中... 成功
-209:	DirectInput関係初期化処理
-209:		DirectInput8 の取得を試みます...成功
-223:			引き続き初期化処理... 初期化成功
-225:		ジョイパッドの初期化... 
-226:			XInput 対応コントローラーのチェックを開始します
-226:				XInput 対応コントローラー No.0 をチェック
-227:				XInput 対応コントローラー No.0 の接続は確認できませんでした
-227:				XInput 対応コントローラー No.1 をチェック
-227:				XInput 対応コントローラー No.1 の接続は確認できませんでした
-227:				XInput 対応コントローラー No.2 をチェック
-228:				XInput 対応コントローラー No.2 の接続は確認できませんでした
-228:				XInput 対応コントローラー No.3 をチェック
-229:				XInput 対応コントローラー No.3 の接続は確認できませんでした
-229:			XInput 対応コントローラーのチェック完了
-229:			DirectInput 対応ジョイパッドの列挙を開始します
-294:			DirectInput 対応ジョイパッドの列挙終了
-294:		ジョイパッドの初期化は正常に終了しました
-295:		マウスデバイスの初期化... 初期化成功
-295:		キーボードデバイスの初期化... 初期化成功
-300:	DirectInput 関連の初期化は正常に終了しました
-302:	WASAPI の初期化を行います
-309:		デバイス名 : ヘッドホン (Xonar SoundCard)
-315:		デフォルト遅延時間 : 10.000 ms
-315:		最小遅延時間       : 3.000 ms
-315:		遅延時間           : 10.000 ms
-316:		チャンネル数  　   : 2 ch
-316:		量子化ビット深度   : 32 bit
-317:		有効ビット深度　   : 32 bit
-317:		サンプリングレート : 48000 Hz
-317:		データ形式         : 浮動小数点型
-341:		動作モード         : 共有モード
-341:	WASAPI の初期化は正常に終了しました
-347:	d3d11.dll の読み込み.... 成功
-349:	dxgi.dll の読み込み.... 成功
-350:	API CreateDXGIFactory2 のアドレスを取得します.... 成功
-350:	IDXGIFactory2 を作成します.... 成功
-357:	API CreateDXGIFactory6 のアドレスを取得します.... 成功
-358:	IDXGIAdapter を列挙
-358:		Adapter No.0 Desc:NVIDIA GeForce RTX 3060  VRAM:12115MB
-359:			Output Device No.0 Name:\\.\DISPLAY1 ( 0, 0 )-( 1920, 1080 )
-359:			Output Device No.1 Name:\\.\DISPLAY2 ( 1920, 0 )-( 3840, 1080 )
-359:		Adapter No.1 Desc:Microsoft Basic Render Driver  VRAM:0MB
-360:	API D3D11CreateDevice のアドレスを取得します.... 成功
-360:	IDXGIAdapter を取得します.... 成功
-360:	IDXGIAdapter1 を取得します.... 成功
-362:	IDXGIAdapter2 を取得します.... 成功
-362:	IDXGIAdapter3 を取得します.... 成功
-363:	IDXGIAdapter4 を取得します.... 成功
-363:	Direct3D 11 FeatureLevel 11_0 以上を対象とします
-364:	ID3D11Device オブジェクトを取得します.... 成功
-532:	IDXGIDevice1 を取得します.... 成功
-532:	IDXGIDevice1->SetMaximunFrameLatency( 1 ); を実行しました
-533:	[ウインドウモード 1280x720 ( 320, 167 )-( 1600, 887 )]
-533:	IDXGISwapChain2 を作成します.... 成功
-539:	IDXGIFactory2->CreateSwapChainForHwnd の戻り値：0x00000000
-540:	IDXGIOutput を取得します.... 成功
-541:	Graphics Device:NVIDIA GeForce RTX 3060
-541:	画面のフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
-541:	16bit Zバッファフォーマットは DXGI_FORMAT_D16_UNORM です
-541:	24bit Zバッファフォーマットは DXGI_FORMAT_D24_UNORM_S8_UINT です
-542:	32bit Zバッファフォーマットは DXGI_FORMAT_D32_FLOAT です
-542:	16bit カラーフォーマットは DXGI_FORMAT_B5G6R5_UNORM です
-542:	32bit カラーフォーマットは DXGI_FORMAT_B8G8R8X8_UNORM です
-543:	アルファ付き 16bit カラーフォーマットは DXGI_FORMAT_B4G4R4A4_UNORM です
-543:	アルファ付き 32bit カラーフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
-543:	アルファテスト用 16bit カラーフォーマットは DXGI_FORMAT_B5G5R5A1_UNORM です
-543:	アルファテスト用 32bit カラーフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
-543:	ＤＸＴ１テクスチャフォーマットは DXGI_FORMAT_BC1_UNORM です
-544:	ＤＸＴ２テクスチャフォーマットは使えません
-544:	ＤＸＴ３テクスチャフォーマットは DXGI_FORMAT_BC2_UNORM です
-544:	ＤＸＴ４テクスチャフォーマットは使えません
-545:	ＤＸＴ５テクスチャフォーマットは DXGI_FORMAT_BC3_UNORM です
-545:	BC7_UNORM テクスチャフォーマットは DXGI_FORMAT_BC7_UNORM です
-545:	BC7_UNORM_SRGB テクスチャフォーマットは DXGI_FORMAT_BC7_UNORM_SRGB です
-545:	ABGR 整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_UNORM です
-546:	ABGR 浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_FLOAT です
-546:	ABGR 浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32B32A32_FLOAT です
-546:	１チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8_UNORM です
-547:	１チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_UNORM です
-547:	１チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_FLOAT です
-548:	１チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32_FLOAT です
-548:	２チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8G8_UNORM です
-548:	２チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_UNORM です
-549:	２チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_FLOAT です
-549:	２チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32_FLOAT です
-549:	描画用 16bit カラーフォーマットは DXGI_FORMAT_B5G6R5_UNORM です
-550:	描画用 32bit カラーフォーマットは DXGI_FORMAT_B8G8R8X8_UNORM です
-550:	描画用アルファ付き 32bit カラーフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
-550:	描画用 ABGR 整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_UNORM です
-550:	描画用 ABGR 浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_FLOAT です
-550:	描画用 ABGR 浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32B32A32_FLOAT です
-550:	描画用１チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8_UNORM です
-552:	描画用１チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_UNORM です
-552:	描画用１チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_FLOAT です
-552:	描画用１チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32_FLOAT です
-552:	描画用２チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8G8_UNORM です
-553:	描画用２チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_UNORM です
-553:	描画用２チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_FLOAT です
-553:	描画用２チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32_FLOAT です
-553:	使用する機能レベル:D3D_FEATURE_LEVEL_11_1
-554:	同時にレンダリングできるバッファの数:8
-554:	最大テクスチャサイズ　幅:16384 高さ:16384
-554:	標準描画用の頂点バッファの作成.... 成功
-555:	シェーダーコード関係の初期化.... 成功
-566:	各種シェーダー用定数バッファの作成.... 成功
-567:	各種 ID3D11InputLayout の作成.... 成功
-593:	画像の単純転送処理の初期化... 成功
-595:	深度バッファを作成します.... 成功
-598:	フォントの初期化を行います
-600:	フォントの初期化は正常に終了しました
-629:	文字コードバッファの初期化を行います... 完了しました
-635:ＤＸライブラリの初期化処理終了
-66583:ChangeWindowMode実行 
-119318:ChangeWindowMode実行 
-184382:ChangeWindowMode実行 
-272524:ChangeWindowMode実行 
-299846:ChangeWindowMode実行 
-350821:ChangeWindowMode実行 
-417779:ChangeWindowMode実行 
-470098:ChangeWindowMode実行 
-556604:ChangeWindowMode実行 
-657120:ChangeWindowMode実行 
-738267:ChangeWindowMode実行 
-849727:ChangeWindowMode実行 
-934842:ChangeWindowMode実行 
-971448:ChangeWindowMode実行 
-1056019:ChangeWindowMode実行 
-1098544:ChangeWindowMode実行 
-1140887:ChangeWindowMode実行 
-1205438:ChangeWindowMode実行 
-1235676:ChangeWindowMode実行 
-1298150:ChangeWindowMode実行 
-1333635:ChangeWindowMode実行 
-1394280:ChangeWindowMode実行 
-1449404:ChangeWindowMode実行 
-1498386:ChangeWindowMode実行 
-1553903:ChangeWindowMode実行 
-1589556:ChangeWindowMode実行 
-1660205:ChangeWindowMode実行 
-1743457:ChangeWindowMode実行 
-1834875:ChangeWindowMode実行 
-1907850:ChangeWindowMode実行 
-1946208:ChangeWindowMode実行 
-2042525:ChangeWindowMode実行 
-2133638:ChangeWindowMode実行 
-2189068:ChangeWindowMode実行 
-2230468:ChangeWindowMode実行 
-2294636:ChangeWindowMode実行 
-2339068:ChangeWindowMode実行 
-2413290:ChangeWindowMode実行 
-2486145:ChangeWindowMode実行 
-2604751:ChangeWindowMode実行 
-2699087:ChangeWindowMode実行 
-2757822:ChangeWindowMode実行 
-2813690:ChangeWindowMode実行 
-2900781:ChangeWindowMode実行 
-2983512:ChangeWindowMode実行 
-3097964:ChangeWindowMode実行 
-3214242:フォントの初期化を行います
-3214272:フォントの初期化は正常に終了しました
-3214935:d3d11.dll の解放 1
-3214936:dxgi.dll の解放 1
-3214936:Direct3D11 のオブジェクト数を出力
-3214937:Direct3D11 のオブジェクト合計数 : 0
-3214938:DirectInput 関連の終了処理... 完了
-3214940:サウンド関連の終了処理... 完了
-3216470:ウィンドウ関連の終了処理... ウインドウを閉じようとしています
-3216480:ウインドウが破棄されようとしています
-3216481:ソフトを終了する準備が整いました
-3216551:完了
-3216564:ＣＯＭを終了... 完了
-3216565:
-3216565:Alloc memory dump
-3216565:	Total size:0(0.000kb)  Alloc num:0
-3216566:
+117:		No.1  モニター名：\\.\DISPLAY2　1920x1080　32bit　60Hz  96x96dpi
+137:	ディスプレイ情報のセットアップ完了
+138:	ウインドウ矩形 ( 304, 129 )-( 1600, 888 )
+141:	ウインドウの作成に成功しました
+141:	ウインドウを表示します
+160:	ＩＭＥを無効にしました
+160:	ウインドウスタイルをウインドウモード用に変更します... 完了
+180:	XInput DLL の読み込み中... 成功
+181:	DirectInput関係初期化処理
+181:		DirectInput8 の取得を試みます...成功
+189:			引き続き初期化処理... 初期化成功
+191:		ジョイパッドの初期化... 
+192:			XInput 対応コントローラーのチェックを開始します
+192:				XInput 対応コントローラー No.0 をチェック
+192:				XInput 対応コントローラー No.0 の接続は確認できませんでした
+192:				XInput 対応コントローラー No.1 をチェック
+193:				XInput 対応コントローラー No.1 の接続は確認できませんでした
+193:				XInput 対応コントローラー No.2 をチェック
+193:				XInput 対応コントローラー No.2 の接続は確認できませんでした
+193:				XInput 対応コントローラー No.3 をチェック
+194:				XInput 対応コントローラー No.3 の接続は確認できませんでした
+194:			XInput 対応コントローラーのチェック完了
+194:			DirectInput 対応ジョイパッドの列挙を開始します
+258:			DirectInput 対応ジョイパッドの列挙終了
+259:		ジョイパッドの初期化は正常に終了しました
+259:		マウスデバイスの初期化... 初期化成功
+259:		キーボードデバイスの初期化... 初期化成功
+263:	DirectInput 関連の初期化は正常に終了しました
+264:	WASAPI の初期化を行います
+268:		デバイス名 : ヘッドホン (Xonar SoundCard)
+272:		デフォルト遅延時間 : 10.000 ms
+272:		最小遅延時間       : 3.000 ms
+272:		遅延時間           : 10.000 ms
+272:		チャンネル数  　   : 2 ch
+272:		量子化ビット深度   : 32 bit
+272:		有効ビット深度　   : 32 bit
+272:		サンプリングレート : 48000 Hz
+274:		データ形式         : 浮動小数点型
+289:		動作モード         : 共有モード
+289:	WASAPI の初期化は正常に終了しました
+292:	d3d11.dll の読み込み.... 成功
+292:	dxgi.dll の読み込み.... 成功
+293:	API CreateDXGIFactory2 のアドレスを取得します.... 成功
+293:	IDXGIFactory2 を作成します.... 成功
+295:	API CreateDXGIFactory6 のアドレスを取得します.... 成功
+295:	IDXGIAdapter を列挙
+296:		Adapter No.0 Desc:NVIDIA GeForce RTX 3060  VRAM:12115MB
+296:			Output Device No.0 Name:\\.\DISPLAY1 ( 0, 0 )-( 1920, 1080 )
+296:			Output Device No.1 Name:\\.\DISPLAY2 ( 1920, 0 )-( 3840, 1080 )
+296:		Adapter No.1 Desc:Microsoft Basic Render Driver  VRAM:0MB
+296:	API D3D11CreateDevice のアドレスを取得します.... 成功
+297:	IDXGIAdapter を取得します.... 成功
+297:	IDXGIAdapter1 を取得します.... 成功
+297:	IDXGIAdapter2 を取得します.... 成功
+298:	IDXGIAdapter3 を取得します.... 成功
+298:	IDXGIAdapter4 を取得します.... 成功
+298:	Direct3D 11 FeatureLevel 11_0 以上を対象とします
+298:	ID3D11Device オブジェクトを取得します.... 成功
+399:	IDXGIDevice1 を取得します.... 成功
+399:	IDXGIDevice1->SetMaximunFrameLatency( 1 ); を実行しました
+399:	[ウインドウモード 1280x720 ( 320, 167 )-( 1600, 887 )]
+399:	IDXGISwapChain2 を作成します.... 成功
+404:	IDXGIFactory2->CreateSwapChainForHwnd の戻り値：0x00000000
+404:	IDXGIOutput を取得します.... 成功
+404:	Graphics Device:NVIDIA GeForce RTX 3060
+405:	画面のフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
+405:	16bit Zバッファフォーマットは DXGI_FORMAT_D16_UNORM です
+405:	24bit Zバッファフォーマットは DXGI_FORMAT_D24_UNORM_S8_UINT です
+405:	32bit Zバッファフォーマットは DXGI_FORMAT_D32_FLOAT です
+405:	16bit カラーフォーマットは DXGI_FORMAT_B5G6R5_UNORM です
+406:	32bit カラーフォーマットは DXGI_FORMAT_B8G8R8X8_UNORM です
+406:	アルファ付き 16bit カラーフォーマットは DXGI_FORMAT_B4G4R4A4_UNORM です
+406:	アルファ付き 32bit カラーフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
+406:	アルファテスト用 16bit カラーフォーマットは DXGI_FORMAT_B5G5R5A1_UNORM です
+406:	アルファテスト用 32bit カラーフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
+406:	ＤＸＴ１テクスチャフォーマットは DXGI_FORMAT_BC1_UNORM です
+407:	ＤＸＴ２テクスチャフォーマットは使えません
+407:	ＤＸＴ３テクスチャフォーマットは DXGI_FORMAT_BC2_UNORM です
+407:	ＤＸＴ４テクスチャフォーマットは使えません
+407:	ＤＸＴ５テクスチャフォーマットは DXGI_FORMAT_BC3_UNORM です
+407:	BC7_UNORM テクスチャフォーマットは DXGI_FORMAT_BC7_UNORM です
+407:	BC7_UNORM_SRGB テクスチャフォーマットは DXGI_FORMAT_BC7_UNORM_SRGB です
+408:	ABGR 整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_UNORM です
+408:	ABGR 浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_FLOAT です
+408:	ABGR 浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32B32A32_FLOAT です
+408:	１チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8_UNORM です
+408:	１チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_UNORM です
+408:	１チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_FLOAT です
+408:	１チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32_FLOAT です
+409:	２チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8G8_UNORM です
+409:	２チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_UNORM です
+409:	２チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_FLOAT です
+409:	２チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32_FLOAT です
+409:	描画用 16bit カラーフォーマットは DXGI_FORMAT_B5G6R5_UNORM です
+409:	描画用 32bit カラーフォーマットは DXGI_FORMAT_B8G8R8X8_UNORM です
+410:	描画用アルファ付き 32bit カラーフォーマットは DXGI_FORMAT_R8G8B8A8_UNORM です
+410:	描画用 ABGR 整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_UNORM です
+410:	描画用 ABGR 浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16B16A16_FLOAT です
+410:	描画用 ABGR 浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32B32A32_FLOAT です
+410:	描画用１チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8_UNORM です
+411:	描画用１チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_UNORM です
+411:	描画用１チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16_FLOAT です
+411:	描画用１チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32_FLOAT です
+411:	描画用２チャンネル整数 8 ビット型カラーフォーマットは DXGI_FORMAT_R8G8_UNORM です
+411:	描画用２チャンネル整数 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_UNORM です
+411:	描画用２チャンネル浮動小数点 16 ビット型カラーフォーマットは DXGI_FORMAT_R16G16_FLOAT です
+411:	描画用２チャンネル浮動小数点 32 ビット型カラーフォーマットは DXGI_FORMAT_R32G32_FLOAT です
+412:	使用する機能レベル:D3D_FEATURE_LEVEL_11_1
+412:	同時にレンダリングできるバッファの数:8
+412:	最大テクスチャサイズ　幅:16384 高さ:16384
+412:	標準描画用の頂点バッファの作成.... 成功
+413:	シェーダーコード関係の初期化.... 成功
+422:	各種シェーダー用定数バッファの作成.... 成功
+423:	各種 ID3D11InputLayout の作成.... 成功
+445:	画像の単純転送処理の初期化... 成功
+446:	深度バッファを作成します.... 成功
+448:	フォントの初期化を行います
+450:	フォントの初期化は正常に終了しました
+469:	文字コードバッファの初期化を行います... 完了しました
+474:ＤＸライブラリの初期化処理終了
+2124:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2124:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2124:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2124:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2126:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2126:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2126:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2126:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2127:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2127:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2129:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2129:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2130:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2130:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2130:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2130:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2131:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2131:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2131:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2131:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2133:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2134:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2134:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2134:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2134:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2135:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2135:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2135:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2135:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2135:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2137:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2138:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2138:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2138:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2139:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2139:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2139:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2139:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2140:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2140:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2142:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2142:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2142:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2143:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2143:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2143:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2143:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2144:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2144:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2144:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2146:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2146:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2147:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2147:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2147:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2147:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2148:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2148:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2148:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2148:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2150:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2151:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2151:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2151:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2151:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2151:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2152:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2152:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2152:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2152:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2898:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2899:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+2899:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2899:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+2900:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2900:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+2900:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2900:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+2901:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+2901:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+3703:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+3704:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+3704:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+3704:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+3704:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+3705:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+3705:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+3705:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+3705:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+3706:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+4471:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+4471:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+4471:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+4472:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+4472:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+4472:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+4473:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+4473:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+4473:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+4473:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+5251:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+5251:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+5252:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+5252:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+5252:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+5252:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+5253:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+5253:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+5253:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+5254:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+5939:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+5940:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+5940:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+5940:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+5940:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+5941:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+5941:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+5941:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+5941:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+5942:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+6714:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+6715:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+6715:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+6715:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+6716:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+6716:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+6717:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+6717:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+6717:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+6717:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+7470:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+7470:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+7471:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+7471:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+7471:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+7471:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+7472:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+7472:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+7472:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+7472:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+8208:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+8208:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+8209:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+8209:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+8209:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+8210:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+8210:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+8210:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+8211:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+8211:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+8985:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+8985:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+8986:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+8986:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+8986:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+8987:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+8987:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+8987:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+8987:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+8988:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+9634:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+9635:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+9635:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+9635:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+9636:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+9636:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+9636:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+9636:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+9637:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+9637:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+10226:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+10226:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+10227:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+10227:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+10227:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+10228:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+10228:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+10228:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+10228:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+10229:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+10825:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+10825:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+10825:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+10826:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+10826:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+10826:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+10827:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+10827:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+10827:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+10827:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+11675:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+11675:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+11676:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+11676:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+11676:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+11676:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+11676:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+11676:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+11678:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+11678:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+12475:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+12475:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+12476:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+12476:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+12476:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+12476:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+12476:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+12476:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+12477:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+12477:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+13106:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+13106:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+13106:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+13107:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+13107:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+13107:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+13108:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+13108:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+13108:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+13108:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+13755:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+13756:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+13756:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+13756:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+13757:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+13757:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+13757:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+13757:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+13758:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+13758:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+14353:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+14353:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+14353:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+14353:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+14354:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+14354:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+14354:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+14355:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+14355:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+14355:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+14944:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+14945:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+14945:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+14945:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+14946:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+14946:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+14946:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+14946:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+14947:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+14947:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+15456:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+15456:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+15457:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+15457:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+15457:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+15457:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+15458:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+15458:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+15458:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+15458:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+16074:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+16074:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+16075:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+16075:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+16075:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+16075:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+16076:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+16076:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+16076:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+16076:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+16588:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+16588:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+16588:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+16589:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+16589:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+16589:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+16589:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+16590:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+16590:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+16590:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+17255:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+17255:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+17256:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+17256:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+17256:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+17257:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+17257:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+17257:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+17258:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+17258:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+17729:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+17730:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+17730:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+17730:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+17730:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+17731:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+17731:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+17731:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+17731:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+17732:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+18185:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+18185:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+18185:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+18185:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+18186:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+18186:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+18186:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+18186:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+18187:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+18187:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+18973:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+18973:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+18974:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+18974:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+18974:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+18974:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+18975:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+18975:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+18975:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+18975:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+19457:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+19457:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+19457:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+19458:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+19458:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+19458:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+19459:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+19459:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+19459:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+19459:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+19862:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+19862:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+19863:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+19863:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+19863:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+19864:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+19864:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+19864:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+19865:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+19865:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+20286:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+20286:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+20286:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+20287:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+20287:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+20287:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+20288:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+20288:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+20288:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+20288:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+20691:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+20692:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+20692:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+20692:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+20693:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+20693:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+20693:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+20693:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+20694:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+20694:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+21037:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+21038:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+21038:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+21038:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+21038:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+21039:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+21039:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+21039:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+21039:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+21039:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+21613:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+21613:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+21613:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+21613:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+21614:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+21614:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+21615:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+21615:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+21615:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+21615:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+22422:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+22422:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+22423:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+22423:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+22423:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+22423:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+22424:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+22424:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+22424:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+22424:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+22856:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+22856:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+22856:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+22857:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+22857:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+22857:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+22857:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+22857:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+22857:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+22859:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+23290:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+23290:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+23290:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+23290:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+23291:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+23291:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+23291:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+23291:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+23292:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+23292:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+23603:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+23603:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+23603:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+23603:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+23604:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+23604:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+23604:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+23604:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+23605:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+23605:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+23914:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+23915:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+23915:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+23915:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+23916:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+23916:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+23916:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+23916:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+23917:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+23917:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+24528:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+24528:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\koka.mp3
+24529:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+24529:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\kako.mp3
+24529:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+24529:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\ka.mp3
+24530:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+24530:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\don.mp3
+24530:File Open Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+24530:Sound File Load Error : C:\Users\Administrator\source\repos\tetris_release\sound\piroron.mp3
+87139:ChangeWindowMode実行 
+129848:ChangeWindowMode実行 
+206717:ChangeWindowMode実行 
+251885:ChangeWindowMode実行 
+283154:ChangeWindowMode実行 
+334709:ChangeWindowMode実行 
+408393:ChangeWindowMode実行 
+454030:ChangeWindowMode実行 
+506970:ChangeWindowMode実行 
+585856:フォントの初期化を行います
+585856:フォントの初期化は正常に終了しました
+585915:d3d11.dll の解放 1
+585916:dxgi.dll の解放 1
+585916:Direct3D11 のオブジェクト数を出力
+585916:Direct3D11 のオブジェクト合計数 : 0
+585916:DirectInput 関連の終了処理... 完了
+585917:サウンド関連の終了処理... 完了
+586040:ウィンドウ関連の終了処理... ウインドウを閉じようとしています
+586046:ウインドウが破棄されようとしています
+586046:ソフトを終了する準備が整いました
+586113:完了
+586114:ＣＯＭを終了... 完了
+586114:
+586115:Alloc memory dump
+586115:	Total size:0(0.000kb)  Alloc num:0
+586115:

@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\Administrator\source\repos\tetris\x64\Debug\DxLib_0000.exe</FullPath>
+      <FullPath>C:\Users\Administrator\source\repos\tetris_release\x64\Debug\DxLib_0000.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
