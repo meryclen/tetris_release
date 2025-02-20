@@ -191,7 +191,7 @@ void BLOCK::update()
             getGame()->set_pressLeft(1);
             getGame()->set_pressLeftTime(now);
         }
-        else if(now - getGame()->get_pressLeftTime() > 150)
+        else if(now - getGame()->get_pressLeftTime() > 100)
         {
             for (int i = 0; i < 4;++i)
             {
@@ -239,7 +239,7 @@ void BLOCK::update()
             getGame()->set_pressRight(1);
             getGame()->set_pressRightTime(now);
         }
-        else if (now - getGame()->get_pressRightTime() > 150)
+        else if (now - getGame()->get_pressRightTime() > 100)
         {
             for (int i = 0; i < 4;++i)
             {
@@ -438,7 +438,7 @@ void BLOCK::update()
 
 
     if (_block[0].blockStatus == 2)
-        if(now - getGame()->get_gameTime() > 250)
+        if(now - getGame()->get_gameTime() > 300)
     {
             _block[0].blockStatus = 0;
 
