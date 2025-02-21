@@ -8,8 +8,7 @@ class BLOCK :
     public GAME_OBJECT
 {
 	int fontHandle = CreateFontToHandle(NULL, 40, 3);
-
-	//int pressDown = 0;
+	
 
 public:
 	struct DATA
@@ -29,7 +28,7 @@ public:
 		bool movableRight = true;
 		bool movableDown = true;
 
-		//int blockAngle = GAME::BLOCK_ANGLE_0;
+		
 		int g = GAME::BLOCK_TYPE_I;
 		int h = GAME::BLOCK_ANGLE_0;
 

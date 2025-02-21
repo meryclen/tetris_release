@@ -42,15 +42,15 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR IpCmdLine,
 			ScreenFlip();
 		}
 
-		//GAME* g = new GAME();
+		
 		{
 			GAME gameObject;
 			gameObject.run();
 		}
 
-		while(!0)// (!(CheckHitKey(KEY_INPUT_RETURN)))
+		while(!0)
 		{
-			//ClearDrawScreen();
+			
 			DrawFormatString(500, 650, GetColor(200, 0, 0), "エンターキーを押すと終了します\n");
 			DrawFormatString(500, 690, GetColor(200, 0, 0), "スペースキーを押すと続行します\n");
 			ScreenFlip();

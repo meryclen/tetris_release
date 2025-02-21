@@ -13,8 +13,7 @@ class GAME
 public:
 
 	enum BLOCK_TYPE
-	{
-		//BLOCK_TYPE_NULL,
+	{		
 		BLOCK_TYPE_I,
 		BLOCK_TYPE_O,
 		BLOCK_TYPE_S,
@@ -51,11 +50,12 @@ private:
 	char buffer[128];
 	char buffer1[256];
 	std::string line;
-	//const char* _Filename;
+	
 	int fontHandle = CreateFontToHandle(NULL, 40, 3);
 
 	int gameStatus = 0; //0:正常　1:ゲームオーバー
-//public:
+
+
 	int startTime = 0;
 	int previousTime = 0;
 	int gameTime = 0;
@@ -64,7 +64,7 @@ private:
 	int pressRightTime = 0;
 
 	double deltaTime = 0.0;
-	//static const int e_passTime = 0;
+	
 
 	int pressX = 0;
 	int pressZ = 0;
@@ -72,27 +72,24 @@ private:
 	int pressRight = 0;
 	int pressDown = 0;
 	int pressUp = 0;
-	//int pressDown1 = 0;
+	
 
 	std::random_device rd;
 	int random_block[1000];
 	int random_block_number = 0;
 
-	//std::vector<std::thread> threads;
-	//std::mutex mtx;
+	
 	bool isFull = true;
 	bool isTetris = false;
 
-	//
+	
 	int soundON[GAME::SOUND_NUM] = { 0 };
 
 	int score = 0;
-	//std::ofstream scoreFile("score.txt", std::ios::app);
+	
 	std::ofstream scoreFile;
 	std::ifstream stream;
-
-	//std::ofstream scoreFile(const char*, std::ios::openmode);
-	//std::ofstream stream("score.txt");
+		
 
 private:
 	class BLOCK_STAGE* _block_stage;
@@ -108,8 +105,7 @@ public:
 	class BLOCK_STAGE* block_stage() { return _block_stage; }
 	class BLOCK* block(int i) { return _block[i]; }
 
-	//static void updateDeltaTime();
-
+	
 	double getDeltaTime() //const
 	{
 		return deltaTime;
@@ -156,14 +152,10 @@ public:
 	void set_random_block_number(int n) { random_block_number = n; }
 
 
-	//
 	int get_soundON(int i) { return soundON[i]; }
 	void set_soundON(int i,int j) { soundON[i] = j; }
-
-	//std::ofstream stream("score.txt");
-	//std::ofstream scoreFile(*a, *b);
+		
 
 	void kari();
-
-	//void heavyTask();
+		
 };
