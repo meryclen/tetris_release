@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body
+{
+    background-color: #30b0308f;
+}
+
+#message{
+    color: red;
+
+}
+
+.class_1 {
+    color:#ff808080;
+}
+
+/*
+.alert-alert-danger {
+    color:#ff80c080;
+}
+    */
